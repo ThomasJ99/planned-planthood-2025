@@ -1,134 +1,138 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bilder på Blommor." />
 
-    Planned Planthood
-    Meny
-    Hem
-    Historik
-    Tips
-    Kontakt
+    <link rel="stylesheet" href="style.css" />
+    <title>Planthood</title>
+  </head>
+  <body>
+    <header class="wrapper">
+      <a class="" href="#">
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 214 210"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="none" stroke="red" stroke-width="12">
+            <path
+              d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"
+            />
+            <path
+              d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"
+            />
+          </g>
+        </svg>
+        <!-- Icon for page -->
+        <p>Planned <span class="block line-height">Planthood</span></p>
+      </a>
+      <!-- Text to the right of icon -->
+      <nav>
+        <!-- Could be made into a hambuger menu if i have the time -->
+        <ul>
+          <li role="list">Hem</li>
+          <li role="list">Historik</li>
+          <li role="list">Tips</li>
+          <li role="list">Kontakt</li>
+        </ul>
+      </nav>
+    </header>
 
-    Våra uppskattade växter
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore autem! Expedita illo deleniti maiores harum consequatur debitis hic.
+    <main class="wrapper flow">
+      <article>
+        <h1>Våra uppskattade växter</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+          ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore
+          autem! Expedita illo deleniti maiores harum consequatur debitis hic.
+        </p>
+        <!-- Section for the image gallery, will contain 6 images and they will be created with grid
+         using grid areas to define the layout, it should have 3 states, desktop, pad, phone -->
+        <section class="cards">
+          <div class="">
+            <img src="" alt="" />
+            <section class="topic-tag">
+              <p class="">Blommor</p>
+              <p class="">Ätbart</p>
+              <p class="">Grönska</p>
+            </section>
+            <section>
+              <h3>Gurka</h3>
+              <p>
+                Gurka växer snabbt, är enkel att odla och ger mängder med
+                gurkor, bara man är noga med vattning, omplantering, duschning
+                och gödsling.
+              </p>
+            </section>
+            <!-- author -->
+            <p>Coolio</p>
+            <time class="">2024-04-01</time>
+          </div>
+        </section>
+      </article>
 
-    Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
-    Skicka
+      <!-- <div class="cards"> PRIOR CARD SYSTEM
+          <a href="website.html" class="">
+            <article class="" id="featured">
+              <img
+                src=""
+                alt=""
+              />
+              <h2 class="">Klassiska pannkakor</h2>
+              <p class="">
+                Gör traditionellatunna pannkakor med detta enkla och goda
+                pannkaksrecept.
+                <span class=""
+                  >Rekomenderar denna!</span
+                >
+              </p>
+            </article>
+          </a> -->
 
-    Alla våra växter
+      <!-- make this a breakout class with the white banner going across the entire inline screen -->
+      <!-- copy paste this structure when its finished and add it below card section with minor changes -->
+      <section>
+        <div>
+          <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+          <div>
+            <label for="user-email"></label>
+            <input id="user-email" type="email" />
+            <button></button>
+          </div>
+        </div>
+        <!-- svg file for image, have the image be in a empty div thats styled with a background color and radius -->
+        <div></div>
+      </section>
 
-    Gurka
-    Blommor
-    Ätbart
-    Grönska
-    Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
-    omplantering,
-    duschning och gödsling.
-    Coolio
-    2024-04-01
+      <section>
+        <h2>Alla våra växter</h2>
+        <section class="card"></section>
+      </section>
 
-    Tomat
-    Solälskande
-    Lättodlat
-    Ätbart
-    En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
-    Anna Odlare
-    2024-12-05
-
-    Pelargon
-    Dekorativ
-    Färgstark
-    Tålig
-    Blommor
-    En vacker och lättskött blomma som trivs både inne och ute under sommaren.
-    Blomsterkalle
-    2024-12-03
-
-    Basilika
-    Dekorativ
-    Färgstark
-    Tålig
-    En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
-    Krydd-Malin
-    2024-12-07
-
-    Sallad
-    Snabbväxande
-    Ätbart
-    Grönska
-    Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
-    Grönis
-    2024-12-06
-
-    Ormbunke
-    Luftfuktande
-    Grönska
-    Dekorativ
-    En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
-    Naturvännen
-    2024-12-08
-
-    Gurka
-    Blommor
-    Ätbart
-    Grönska
-    Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning,
-    omplantering,
-    duschning och gödsling.
-    Coolio
-    2024-04-01
-
-    Tomat
-    Solälskande
-    Lättodlat
-    Ätbart
-    En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
-    Anna Odlare
-    2024-12-05
-
-    Pelargon
-    Dekorativ
-    Färgstark
-    Tålig
-    Blommor
-    En vacker och lättskött blomma som trivs både inne och ute under sommaren.
-    Blomsterkalle
-    2024-12-03
-
-    Basilika
-    Dekorativ
-    Färgstark
-    Tålig
-    En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
-    Krydd-Malin
-    2024-12-07
-
-    Sallad
-    Snabbväxande
-    Ätbart
-    Grönska
-    Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
-    Grönis
-    2024-12-06
-
-    Ormbunke
-    Luftfuktande
-    Grönska
-    Dekorativ
-    En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
-    Naturvännen
-    2024-12-08
-
-    Våra tidigare odlingar
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
-
-    Planterade plantor
-
-    Om oss
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?
-
-    Telefon: 020-1234567
-    E-post: info@plannedplant.com
-
-    Hem
-    Historik
-    Tips
-    Kontakt
- 
+      <footer>
+        <div>
+          <h2>Om oss</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
+            veniam ducimus aut sint atque ullam alias perspiciatis fuga.
+            Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione
+            earum. Iure, eius molestias?
+          </p>
+          <p>Telefon: 020-1234567</p>
+          <address E-post: info@plannedplant.com></address>
+        </div>
+        <nav>
+          <ul>
+            <li role="list">Hem</li>
+            <li role="list">Historik</li>
+            <li role="list">Tips</li>
+            <li role="list">Kontakt</li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>
