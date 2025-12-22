@@ -182,7 +182,7 @@ body {
 /* Styling for buttons */
 button {
   border-radius: 2rem;
-  padding: 0.35rem 1rem;
+  padding: 0.35rem 1.25rem;
   margin: 2px;
   background-color: var(--clr-accent);
   border: none;
@@ -194,6 +194,11 @@ input {
   border: none;
   padding-inline: 2rem;
   color: var(--font-base);
+
+  /* Need to figure out how to remove the textbox that appears */
+  /* &:focus-visible {
+    border: none;
+  } */
 }
 
 /*** Composition ***/
@@ -264,6 +269,27 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .border-shadow {
   box-shadow: var(--border-shadow);
 }
+
+/* Need to set these fw up correctly */
+
+/* .fw-regular {
+  --fw-regular: var(--fw-400);
+}
+
+.fw-medium {
+  --fw-medium: var(--fw-500);
+}
+
+.fw-semi-bold {
+  --fw-semi-bold: var(--fw-600);
+}
+.fw-bold {
+  --fw-bold: var(--fw-700);
+}
+
+.fw-x-bold {
+  --fw-x-bold: var(--fw-900);
+} */
 
 .light-bg {
   background-color: var(--clr-accent-light-1);
@@ -375,7 +401,7 @@ header {
   }
 }
 
-.banner {
+.banner-header {
   background-color: var(--clr-primary-light-2);
   display: flex;
   flex-direction: column;
@@ -399,7 +425,7 @@ header {
   padding: var(--flow-space-lg);
 }
 
-.breakout {
+.banners {
   display: flex;
   align-items: center;
   justify-content: center;
