@@ -231,6 +231,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 /* keep the content of the content-grid and fullwidth inside the content container */
+/* Selects all children inside content-grid and fullwidth */
 .content-grid > *,
 .fullwidth > * {
   grid-column: content;
@@ -376,31 +377,39 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 /*** Block Elements ***/
 
+/* I only use one header so i decided to style the entire element */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: var(--clr-accent);
   font-weight: var(--fw-600);
   background-color: var(--clr-accent-light-1);
 
-  a {
+  /* With content grid I had to seperate the flex element to be outside the grid element by putting it on a div right below that encapsulates every other element */
+  .nav-flex {
     display: flex;
-    gap: var(--spacing-base);
-    font-size: var(--fs-500);
+    justify-content: space-between;
     align-items: center;
-  }
+    margin-inline: var(--spacing-base);
 
-  svg {
-    stroke: var(--clr-accent);
-  }
+    a {
+      display: flex;
+      gap: var(--spacing-base);
+      font-size: var(--fs-500);
+      align-items: center;
+    }
 
-  ul {
-    gap: var(--flow-space-lg);
-    display: flex;
+    /* Color for the svg file */
+    svg {
+      stroke: var(--clr-accent);
+    }
+
+    ul {
+      gap: var(--flow-space-lg);
+      display: flex;
+    }
   }
 }
 
+/* Site banner with text, also contains the image gallery */
 .banner-header {
   background-color: var(--clr-primary-light-2);
   display: flex;
@@ -411,6 +420,7 @@ header {
   text-align: center;
 }
 
+/* Basic gallery so far, will need to be made with grid areas later */
 .image-gallery {
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
@@ -419,12 +429,24 @@ header {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/* Green background for the banners with svg's in them */
+/* Can use flex row reverse later to invert the layout instead of moving it around in the HTML */
 .green-bg {
   background-color: var(--clr-accent);
   border-radius: 15rem;
   padding: var(--flow-space-lg);
 }
 
+.banner-text {
+  p {
+    padding-bottom: var(--spacing-base);
+  }
+  div {
+    justify-content: flex-end;
+  }
+}
+
+/* Styling för banners that are not the first one */
 .banners {
   display: flex;
   align-items: center;
@@ -433,6 +455,7 @@ header {
   padding: var(--flow-space);
 }
 
+/* Styling for the container where the email input field and button reside */
 .button-container {
   display: inline-block;
   border: 1px solid black;
@@ -445,8 +468,9 @@ header {
   padding-bottom: var(--spacing-base);
 }
 
+/* Might make this a utility instead since its only 1 line at the moment */
 .topic-tags {
-  padding-block: 1rem;
+  padding-block: var(--spacing-base);
 }
 
 /* TEMP... */
@@ -456,21 +480,24 @@ header {
 
 .cards {
   display: grid;
+  /* Creates columns that are at least 30ch wide and at max 1fr */
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   /* margin: 1rem; */
-  gap: 1rem;
+  gap: var(--spacing-base);
 }
 
 .card {
+  /* Might be able to make some backgrounds utilities */
   background-color: var(--clr-accent-light-1);
-  padding: 1rem;
+  padding: var(--spacing-base);
+  align-items: stretch;
 
   p {
     margin-bottom: var(--flow-space);
   }
 
-  & img:nth-child(1) {
-    /* width: 100%; */
+  & :last-child {
+    width: 100%;
   }
 
   h3 {
@@ -487,7 +514,29 @@ header {
     border: 2px solid var(--clr-neutral-900);
   }
 }
-.wrapper {
-  max-inline-size: 1280px;
-  margin: auto;
+
+footer {
+  background-color: var(--clr-accent);
+  color: var(--clr-accent-light-1);
+  padding-block: var(--flow-space);
+
+  .flexy {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: var(--spacing-base);
+
+    p {
+      padding-block: var(--spacing-base);
+    }
+
+    a {
+      color: inherit;
+      padding-bottom: var(--spacing-base);
+      font-weight: var(--fw-700);
+    }
+
+    li {
+      padding-top: var(--spacing-base);
+    }
+  }
 }
