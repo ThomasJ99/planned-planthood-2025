@@ -33,7 +33,6 @@
         </a>
         <!-- Text to the right of icon -->
         <nav>
-          
           <!-- Could be made into a hambuger menu if i have the time -->
           <ul>
             <li class="" role="list"><a href="#">Hem</a></li>
@@ -42,23 +41,24 @@
             <li class="" role="list"><a href="#">Kontakt</a></li>
           </ul>
         </nav>
-        <svg class="hamburger"
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-menu"
-        width="32"
-        height="62"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <line x1="4" y1="6" x2="20" y2="6" />
-        <line x1="4" y1="12" x2="20" y2="12" />
-        <line x1="4" y1="18" x2="20" y2="18" />
-      </svg>
+        <svg
+          class="hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-menu"
+          width="32"
+          height="62"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
       </div>
     </header>
     <!-- Implement new grid here as a wrapper -->
@@ -70,36 +70,16 @@
           ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore
           autem! Expedita illo deleniti maiores harum consequatur debitis hic.
         </p>
-        <!-- First version -->
-        <!-- <section class="image-gallery">
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-        </section> -->
 
-        <!-- <section class="grid-container image-gallery">
-          <img class="a box" src="https://picsum.photos/350?random=1" alt="" />
-          <img class="b box" src="https://picsum.photos/350?random=2" alt="" />
-          <img class="c box" src="https://picsum.photos/350?random=3" alt="" />
-          <img class="d box" src="https://picsum.photos/350?random=4" alt="" />
-          <img class="e box" src="https://picsum.photos/350?random=5" alt="" />
-          <img class="f box" src="https://picsum.photos/350?random=6" alt="" />
-        </section> -->
-
-        <!-- Third try -->
-        <div class="grid image-gallery">
-          <img src="https://picsum.photos/350?random=1" class="left" />
-          <img src="https://picsum.photos/350?random=2" />
-          <img src="https://picsum.photos/350?random=3" />
-          <img src="https://picsum.photos/350?random=4" />
-          <img src="https://picsum.photos/350?random=5" class="wide" />
-          <img src="https://picsum.photos/350?random=6" />
-        </div>
-        
-      </article> 
+        <section class="grid-container image-gallery">
+          <img class="a" src="https://picsum.photos/350?random=1" alt="" />
+          <img class="b" src="https://picsum.photos/350?random=2" alt="" />
+          <img class="c" src="https://picsum.photos/350?random=3" alt="" />
+          <img class="d" src="https://picsum.photos/350?random=4" alt="" />
+          <img class="e" src="https://picsum.photos/350?random=5" alt="" />
+          <img class="f" src="https://picsum.photos/350?random=6" alt="" />
+        </section>
+      </article>
 
       <!-- make this a breakout class with the white banner going across the entire inline screen -->
       <!-- copy paste this structure when its finished and add it below card section with minor changes -->
@@ -115,7 +95,7 @@
           </div>
         </div>
         <!-- svg file for image, have the image be in a empty div thats styled with a background color and radius -->
-        <div class="green-bg">
+        <section class="green-bg">
           <svg
             aria-hidden="true"
             width="100"
@@ -197,7 +177,7 @@
               stroke="white"
             />
           </svg>
-        </div>
+        </section>
       </section>
 
       <h2 class="align-text">Alla våra växter</h2>
@@ -208,10 +188,7 @@
         <div class="card border-shadow">
           <img src="https://picsum.photos/300/300" alt="" />
           <section class="topic-tags flex gap-tiny">
-            <a
-              href="#"
-              class="flower border-r white-text padding-tags p-font flex"
-            >
+            <a href="#" class="flower border-r white-text padding-tags p-font">
               Blommor
             </a>
             <a href="#" class="edible border-r white-text padding-tags p-font"
@@ -236,8 +213,10 @@
           <section class="author gap-1">
             <img src="https://i.pravatar.cc/" alt="" />
             <div>
-              <a class="block" href="#">Coolio</a>
-              <time class="">2024-04-01</time>
+              <a href="#">Coolio</a>
+              <div>
+                <time class="">2024-04-01</time>
+              </div>
             </div>
           </section>
         </div>
@@ -414,7 +393,7 @@
             delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
             nam quaerat doloribus?
           </p>
-          <div class="flex">
+          <div class="temp">
             <button>Planterade plantor</button>
           </div>
         </section>
