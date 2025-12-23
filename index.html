@@ -33,14 +33,32 @@
         </a>
         <!-- Text to the right of icon -->
         <nav>
+          
           <!-- Could be made into a hambuger menu if i have the time -->
           <ul>
-            <li role="list"><a href="#">Hem</a></li>
-            <li role="list"><a href="#">Historik</a></li>
-            <li role="list"><a href="#">Tips</a></li>
-            <li role="list"><a href="#">Kontakt</a></li>
+            <li class="" role="list"><a href="#">Hem</a></li>
+            <li class="" role="list"><a href="#">Historik</a></li>
+            <li class="" role="list"><a href="#">Tips</a></li>
+            <li class="" role="list"><a href="#">Kontakt</a></li>
           </ul>
         </nav>
+        <svg class="hamburger"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-menu"
+        width="32"
+        height="62"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
       </div>
     </header>
     <!-- Implement new grid here as a wrapper -->
@@ -52,16 +70,36 @@
           ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore
           autem! Expedita illo deleniti maiores harum consequatur debitis hic.
         </p>
+        <!-- First version -->
+        <!-- <section class="image-gallery">
+          <img src="https://picsum.photos/400/400" alt="" />
+          <img src="https://picsum.photos/400/400" alt="" />
+          <img src="https://picsum.photos/400/400" alt="" />
+          <img src="https://picsum.photos/400/400" alt="" />
+          <img src="https://picsum.photos/400/400" alt="" />
+          <img src="https://picsum.photos/400/400" alt="" />
+        </section> -->
 
-        <section class="image-gallery">
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-          <img src="https://picsum.photos/400/400" alt="" />
-        </section>
-      </article>
+        <!-- <section class="grid-container image-gallery">
+          <img class="a box" src="https://picsum.photos/350?random=1" alt="" />
+          <img class="b box" src="https://picsum.photos/350?random=2" alt="" />
+          <img class="c box" src="https://picsum.photos/350?random=3" alt="" />
+          <img class="d box" src="https://picsum.photos/350?random=4" alt="" />
+          <img class="e box" src="https://picsum.photos/350?random=5" alt="" />
+          <img class="f box" src="https://picsum.photos/350?random=6" alt="" />
+        </section> -->
+
+        <!-- Third try -->
+        <div class="grid image-gallery">
+          <img src="https://picsum.photos/350?random=1" class="left" />
+          <img src="https://picsum.photos/350?random=2" />
+          <img src="https://picsum.photos/350?random=3" />
+          <img src="https://picsum.photos/350?random=4" />
+          <img src="https://picsum.photos/350?random=5" class="wide" />
+          <img src="https://picsum.photos/350?random=6" />
+        </div>
+        
+      </article> 
 
       <!-- make this a breakout class with the white banner going across the entire inline screen -->
       <!-- copy paste this structure when its finished and add it below card section with minor changes -->
@@ -370,7 +408,7 @@
         </section>
         <section class="banner-text">
           <h2 class="hello">Våra tidigare odlingar</h2>
-          <p class="max-inline">
+          <p class="max-inline-50ch">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto
             delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
@@ -387,7 +425,7 @@
         <div class="flexy">
           <section>
             <h2>Om oss</h2>
-            <p class="max-inline">
+            <p class="max-inline-60">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
               veniam ducimus aut sint atque ullam alias perspiciatis fuga.
               Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione

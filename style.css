@@ -179,13 +179,26 @@ body {
   color: var(--clr-primary-dark);
 }
 
+/*** Composition ***/
+
 /* Styling for buttons */
 button {
   border-radius: 2rem;
   padding: 0.35rem 1.25rem;
   margin: 2px;
   background-color: var(--clr-accent);
-  border: none;
+  border: 2px solid var(--clr-accent);
+
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-accent);
+    background-color: var(--clr-accent-light-1);
+  }
+
+  &:active {
+    background-color: var(--clr-primary-light-1);
+  }
 }
 
 /* Styling for input fields */
@@ -196,12 +209,12 @@ input {
   color: var(--font-base);
 
   /* Need to figure out how to remove the textbox that appears */
-  /* &:focus-visible {
+  &:focus {
     border: none;
-  } */
+    outline: none;
+  }
 }
 
-/*** Composition ***/
 .flow > * + * {
   margin-block-start: var(--flow-space);
 }
@@ -340,6 +353,14 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   max-inline-size: 70ch;
 }
 
+.max-inline-50ch {
+  max-inline-size: 45ch;
+}
+
+.max-inline-60 {
+  max-inline-size: 60ch;
+}
+
 .align-text {
   text-align: center;
 }
@@ -382,6 +403,7 @@ header {
   color: var(--clr-accent);
   font-weight: var(--fw-600);
   background-color: var(--clr-accent-light-1);
+  text-transform: uppercase;
 
   /* With content grid I had to seperate the flex element to be outside the grid element by putting it on a div right below that encapsulates every other element */
   .nav-flex {
@@ -395,6 +417,7 @@ header {
       gap: var(--spacing-base);
       font-size: var(--fs-500);
       align-items: center;
+      text-decoration: none;
     }
 
     /* Color for the svg file */
@@ -405,6 +428,23 @@ header {
     ul {
       gap: var(--flow-space-lg);
       display: flex;
+
+      a {
+        /* border: 1px solid black; */
+        padding: var(--spacing-base);
+        transition: 0.2s;
+        font-weight: var(--fw-600);
+
+        &:hover {
+          background-color: var(--clr-accent);
+          color: aliceblue;
+        }
+      }
+      svg {
+        display: none;
+        text-decoration: none;
+        list-style: none;
+      }
     }
   }
 }
@@ -425,8 +465,136 @@ header {
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr)); */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+/* Grid areas setup */
+.box {
+  background-color: #0071ff;
+}
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.e {
+  grid-area: e;
+}
+
+.f {
+  grid-area: f;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  /* grid-template-rows: 150px 150px; */
+  /* grid-auto-rows: minmax(40px, auto); */
+  /* gap: var(--spacing-base); */
+
+  grid-template-areas:
+    "a a b c d d"
+    "a a e e f f";
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (width < 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "box-1 box-2 box-3 "
+      "box-4 box-5 box-6 ";
+  }
+}
+
+@media (width < 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 150px 150px; */
+
+    grid-template-areas:
+      "box-1 box-2"
+      "box-3 box-4"
+      "box-5 box-6";
+  }
+}
+
+/* Another attempt */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Stor bild till vänster */
+.left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+/* Bred bild nere i mitten */
+.wide {
+  grid-column: 2 / 4;
+}
+
+/* Pad */
+@media (width < 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .left,
+  .wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .grid img {
+    height: auto;
+  }
+}
+
+/* Phone */
+@media (width < 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .left,
+  .wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .grid img {
+    height: auto;
+  }
 }
 
 /* Green background for the banners with svg's in them */
@@ -449,10 +617,17 @@ header {
 /* Styling för banners that are not the first one */
 .banners {
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
   gap: var(--flow-space-lg);
   padding: var(--flow-space);
+
+  &:nth-child(5) {
+    flex-wrap: wrap;
+    /* background-color: #0071ff;
+    border: 19px solid gold; */
+  }
 }
 
 /* Styling for the container where the email input field and button reside */
@@ -522,6 +697,7 @@ footer {
 
   .flexy {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-inline: var(--spacing-base);
 
@@ -538,5 +714,18 @@ footer {
     li {
       padding-top: var(--spacing-base);
     }
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (width < 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
   }
 }
