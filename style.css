@@ -362,6 +362,10 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   max-inline-size: 70ch;
 }
 
+.max-inline-20ch {
+  max-inline-size: 20ch;
+}
+
 .max-inline-50ch {
   max-inline-size: 45ch;
 }
@@ -461,7 +465,7 @@ header {
   text-align: center;
   gap: var(--flow-space);
 
-  padding-block: var(--flow-space-lg);
+  padding-block: var(--flow-space-lg) var(--flow-space);
 }
 
 /* Grid areas setup */
@@ -552,7 +556,19 @@ together with the rest of the media items */
   align-items: center;
   justify-content: center;
   gap: var(--flow-space-lg);
-  padding: var(--flow-space);
+  padding-block: var(--flow-space);
+
+  h2 {
+    max-inline-size: 20ch;
+    padding-bottom: var(--spacing-base);
+  }
+
+  p {
+    padding-bottom: var(--spacing-base);
+  }
+
+  /* Space above and below the banner, used margin here since I used padding for the inner part */
+  margin-block: var(--flow-space-lg) var(--flow-space);
 
   /* Poor mans solution to finding the correct asset to wrap */
   &:nth-child(5) {
@@ -570,22 +586,8 @@ together with the rest of the media items */
   border-radius: 2rem;
 }
 
-/*Temp...*/
-.hello {
-  max-inline-size: 20ch;
-  padding-bottom: var(--spacing-base);
-}
-
-/* temp */
-.banner-text {
-  p {
-    padding-bottom: var(--spacing-base);
-  }
-}
-
-/* temp */
-.temp {
-  display: flex;
+/* Puts the button at the correct spot, is later centered in a media querie */
+.button-banner-pos {
   justify-content: flex-end;
 }
 
@@ -680,6 +682,7 @@ footer {
   &:hover {
     background-color: var(--clr-accent);
 
+    /* Allows me to style the svg in while hovering the div */
     svg {
       stroke: var(--clr-accent-light-1);
     }
@@ -695,7 +698,7 @@ footer {
     display: block;
   }
 
-  .temp {
+  .button-banner-pos {
     justify-content: center;
   }
 }
