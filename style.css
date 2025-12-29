@@ -616,24 +616,23 @@ together with the rest of the media items */
   /* Might be able to make some backgrounds utilities */
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
-
-  /* height: 75ch; */
+  /* Places the author section at the bottom */
   margin-top: auto;
 
-  /* Good to use if I put top image to 100% width */
-  /* align-items: stretch; */
-
-  /* Fix this to only apply to  */
-  img {
-    /* width: 100%; */
+  /* Makes the top image of the card always take up the card width */
+  > img {
+    width: 100%;
   }
 
   h3 {
+    /* Adds spacing above and below h3 */
     margin-block: var(--spacing-base);
   }
 
   p {
-    margin-bottom: var(--flow-space-lg);
+    margin-bottom: var(--spacing-base);
+    /* Makes it so that the author card is always at the same height */
+    min-height: 15ch;
   }
 }
 
