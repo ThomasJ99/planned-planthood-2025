@@ -286,24 +286,24 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 /* Need to set these fw up correctly */
 
-/* .fw-regular {
-  --fw-regular: var(--fw-400);
+.fw-regular {
+  font-weight: var(--fw-400);
 }
 
 .fw-medium {
-  --fw-medium: var(--fw-500);
+  font-weight: var(--fw-500);
 }
 
 .fw-semi-bold {
-  --fw-semi-bold: var(--fw-600);
+  font-weight: var(--fw-600);
 }
 .fw-bold {
-  --fw-bold: var(--fw-700);
+  font-weight: var(--fw-700);
 }
 
 .fw-x-bold {
-  --fw-x-bold: var(--fw-900);
-} */
+  font-weight: var(--fw-900);
+}
 
 .light-bg {
   background-color: var(--clr-accent-light-1);
@@ -341,8 +341,15 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   background-color: var(--clr-air);
 }
 
-.bg-fragrant {
+.easy {
+  background-color: var(--clr-easy);
+}
+
+.fragrant {
   background-color: var(--clr-fragrant);
+}
+.fast {
+  background-color: var(--clr-fast);
 }
 
 .border-r {
@@ -365,16 +372,12 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   text-align: center;
 }
 
-.white-text {
-  color: var(--clr-accent-light-1);
-}
-
-.padding-tags {
-  padding: 1px 6px;
-}
-
 .flex {
   display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .block {
@@ -400,7 +403,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 /* I only use one header so i decided to style the entire element */
 header {
-  color: var(--clr-accent);
+  /* color: var(--clr-accent); */
   font-weight: var(--fw-600);
   background-color: var(--clr-accent-light-1);
   text-transform: uppercase;
@@ -440,17 +443,11 @@ header {
           color: var(--clr-accent-light-1);
         }
       }
-
-      /* svg {
-        display: none;
-        text-decoration: none;
-        list-style: none;
-      } */
     }
   }
 }
 
-/* Site banner with text, also contains the image gallery */
+/* Site banner with text, also contains the image grid */
 .banner-header {
   /* Flex element for the structure and access to gap */
   display: flex;
@@ -495,7 +492,7 @@ header {
     "a a b c d d"
     "a a e e f f";
 
-  /* Background for the image gallery container */
+  /* Background for the image grid container */
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
 
@@ -505,8 +502,6 @@ header {
     width: 100%;
     /* Aspect ratio to make the images size match the reference */
     aspect-ratio: 5/4;
-
-    /* object-fit: cover; */
   }
 }
 
@@ -564,6 +559,7 @@ together with the rest of the media items */
 
 /* Styling for the container where the email input field and button reside */
 .button-container {
+  /* Inline block so it takes up enough space height wise while also containing its inline, depends on its children */
   display: inline-block;
   border: 1px solid black;
   border-radius: 2rem;
@@ -590,19 +586,20 @@ together with the rest of the media items */
 
 /* Might make this a utility instead since its only 1 line at the moment */
 .topic-tags {
+  font-weight: var(--fw-medium);
   padding-block: var(--spacing-base);
-}
 
-/* TEMP... */
-.p-font {
-  font-weight: var(--fw-500);
+  a {
+    color: var(--clr-accent-light-1);
+    /* Padding on the tags to make the area less cramped */
+    padding: 1px 6px;
+  }
 }
 
 .cards {
   display: grid;
   /* Creates columns that are at least 30ch wide and at max 1fr */
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-  /* margin: 1rem; */
   gap: var(--spacing-base);
 }
 
@@ -614,10 +611,7 @@ together with the rest of the media items */
 
   p {
     margin-bottom: var(--flow-space);
-  }
-
-  & :last-child {
-    width: 100%;
+    max-inline-size: 20ch;
   }
 
   h3 {
@@ -625,14 +619,12 @@ together with the rest of the media items */
   }
 }
 
-.author {
-  display: flex;
-  img {
-    height: 50px;
-    width: 50px;
-    border-radius: var(--flow-space-lg);
-    border: 2px solid var(--clr-neutral-900);
-  }
+/* Styling for the author profile picture */
+.author-image {
+  height: 50px;
+  width: 50px;
+  border-radius: var(--flow-space-lg);
+  border: 2px solid var(--clr-neutral-900);
 }
 
 footer {
