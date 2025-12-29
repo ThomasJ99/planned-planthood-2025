@@ -276,6 +276,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .block {
   display: block;
 }
+
 .line-height {
   line-height: 1;
 }
@@ -348,6 +349,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .fragrant {
   background-color: var(--clr-fragrant);
 }
+
 .fast {
   background-color: var(--clr-fast);
 }
@@ -418,7 +420,7 @@ header {
     a {
       display: flex;
       gap: var(--spacing-base);
-      font-size: var(--fs-500);
+      font-size: var(--fs-400);
       align-items: center;
       text-decoration: none;
     }
@@ -429,12 +431,15 @@ header {
     }
 
     ul {
-      gap: var(--flow-space);
+      /* gap: var(--flow-space); */
+      /* gap: var(--spacing-base); */
+
       display: flex;
 
       a {
         /* Padding adds space for the background color on hover */
-        padding: var(--spacing-base);
+        /* padding: var(--spacing-base); */
+        padding: var(--spacing-base) var(--flow-space);
         transition: 0.2s;
         font-weight: var(--fw-600);
 
@@ -587,7 +592,9 @@ together with the rest of the media items */
 /* Might make this a utility instead since its only 1 line at the moment */
 .topic-tags {
   font-weight: var(--fw-bold);
-  padding-block: var(--spacing-base);
+  padding-top: var(--flow-space);
+  min-height: 5rem;
+  align-items: flex-start;
 
   a {
     text-transform: uppercase;
@@ -610,7 +617,8 @@ together with the rest of the media items */
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
 
-  height: 75ch;
+  /* height: 75ch; */
+  margin-top: auto;
 
   /* Good to use if I put top image to 100% width */
   /* align-items: stretch; */
@@ -626,13 +634,7 @@ together with the rest of the media items */
 
   p {
     margin-bottom: var(--flow-space-lg);
-    max-inline-size: 20ch;
   }
-
-  /* 
-  h3 {
-    padding-block: var(--spacing-base);
-  } */
 }
 
 /* Styling for the author profile picture */
@@ -671,15 +673,17 @@ footer {
 
 .hamburger {
   display: none;
-  cursor: pointer;
+  /* padding: var(--spacing-base); */
+  padding: 0.5rem;
   transition: 0.2s;
-  border: 1px solid black;
-  /* Increases the size of the background box */
-  /* padding: 2px; */
+  cursor: pointer;
 
   &:hover {
     background-color: var(--clr-accent);
-    stroke: var(--clr-accent-light-1);
+
+    svg {
+      stroke: var(--clr-accent-light-1);
+    }
   }
 }
 
