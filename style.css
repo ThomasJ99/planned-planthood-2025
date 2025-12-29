@@ -420,7 +420,7 @@ header {
       text-decoration: none;
     }
 
-    /* Color for the svg file */
+    /* Color for the svg logo */
     svg {
       stroke: var(--clr-accent);
     }
@@ -430,34 +430,36 @@ header {
       display: flex;
 
       a {
-        /* border: 1px solid black; */
+        /* Padding adds space for the background color on hover */
         padding: var(--spacing-base);
         transition: 0.2s;
         font-weight: var(--fw-600);
 
         &:hover {
           background-color: var(--clr-accent);
-          color: aliceblue;
+          color: var(--clr-accent-light-1);
         }
       }
-      svg {
+
+      /* svg {
         display: none;
         text-decoration: none;
         list-style: none;
-      }
+      } */
     }
   }
 }
 
 /* Site banner with text, also contains the image gallery */
 .banner-header {
-  background-color: var(--clr-primary-light-2);
+  /* Flex element for the structure and access to gap */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: var(--flow-space-lg);
-  gap: var(--flow-space);
   text-align: center;
+  gap: var(--flow-space);
+
+  padding-block: var(--flow-space-lg);
 }
 
 /* Grid areas setup */
@@ -493,6 +495,7 @@ header {
     "a a b c d d"
     "a a e e f f";
 
+  /* Background for the image gallery container */
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
 
@@ -502,9 +505,13 @@ header {
     width: 100%;
     /* Aspect ratio to make the images size match the reference */
     aspect-ratio: 5/4;
-    object-fit: cover;
+
+    /* object-fit: cover; */
   }
 }
+
+/* media queries here can be moved down later and used
+together with the rest of the media items */
 
 /* Pad size */
 @media (width <= 1000px) {
@@ -538,18 +545,6 @@ header {
   padding: var(--flow-space-lg);
 }
 
-.banner-text {
-  p {
-    padding-bottom: var(--spacing-base);
-  }
-}
-
-/* temp */
-.temp {
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* Styling för banners that are not the first one */
 .banners {
   display: flex;
@@ -559,6 +554,7 @@ header {
   gap: var(--flow-space-lg);
   padding: var(--flow-space);
 
+  /* Poor mans solution to finding the correct asset to wrap */
   &:nth-child(5) {
     flex-wrap: wrap;
     /* background-color: #0071ff;
@@ -577,6 +573,19 @@ header {
 .hello {
   max-inline-size: 20ch;
   padding-bottom: var(--spacing-base);
+}
+
+/* temp */
+.banner-text {
+  p {
+    padding-bottom: var(--spacing-base);
+  }
+}
+
+/* temp */
+.temp {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Might make this a utility instead since its only 1 line at the moment */
@@ -655,8 +664,17 @@ footer {
 
 .hamburger {
   display: none;
-}
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid black;
+  /* Increases the size of the background box */
+  /* padding: 2px; */
 
+  &:hover {
+    background-color: var(--clr-accent);
+    stroke: var(--clr-accent-light-1);
+  }
+}
 
 /* Use this to hide and adjust "items" for phone */
 @media (width <= 768px) {
