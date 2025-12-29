@@ -429,7 +429,7 @@ header {
     }
 
     ul {
-      gap: var(--flow-space-lg);
+      gap: var(--flow-space);
       display: flex;
 
       a {
@@ -586,13 +586,15 @@ together with the rest of the media items */
 
 /* Might make this a utility instead since its only 1 line at the moment */
 .topic-tags {
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-bold);
   padding-block: var(--spacing-base);
 
   a {
+    text-transform: uppercase;
     color: var(--clr-accent-light-1);
+    font-size: var(--fs-100);
     /* Padding on the tags to make the area less cramped */
-    padding: 1px 6px;
+    padding: 4px 8px;
   }
 }
 
@@ -607,16 +609,30 @@ together with the rest of the media items */
   /* Might be able to make some backgrounds utilities */
   background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
-  align-items: stretch;
 
-  p {
-    margin-bottom: var(--flow-space);
-    max-inline-size: 20ch;
+  height: 75ch;
+
+  /* Good to use if I put top image to 100% width */
+  /* align-items: stretch; */
+
+  /* Fix this to only apply to  */
+  img {
+    /* width: 100%; */
   }
 
   h3 {
-    padding-block: var(--spacing-base);
+    margin-block: var(--spacing-base);
   }
+
+  p {
+    margin-bottom: var(--flow-space-lg);
+    max-inline-size: 20ch;
+  }
+
+  /* 
+  h3 {
+    padding-block: var(--spacing-base);
+  } */
 }
 
 /* Styling for the author profile picture */
@@ -645,7 +661,6 @@ footer {
     a {
       color: inherit;
       padding-bottom: var(--spacing-base);
-      font-weight: var(--fw-700);
     }
 
     li {
