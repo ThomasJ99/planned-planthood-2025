@@ -378,6 +378,10 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   text-align: center;
 }
 
+.align-items {
+  align-items: center;
+}
+
 .flex {
   display: flex;
 }
@@ -625,12 +629,21 @@ header {
     min-height: 16ch;
   }
 
-  /* Styling for the author profile picture */
+  /* Styling for the author profile picture, could use a advanced selector here */
   .author-image {
     height: 50px;
     width: 50px;
     border-radius: var(--flow-space-lg);
     border: 2px solid var(--clr-neutral-900);
+  }
+
+  /* Selects sections with a section in them */
+  section section {
+    line-height: 1;
+
+    time {
+      font-size: var(--fs-200);
+    }
   }
 }
 
@@ -759,5 +772,21 @@ footer {
     &:nth-child(12) {
       display: none;
     }
+  }
+}
+
+.skip {
+  /*Skip link*/
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
   }
 }

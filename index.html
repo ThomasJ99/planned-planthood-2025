@@ -14,6 +14,9 @@
   <body>
     <header class="content-grid fullwidth">
       <div class="nav-flex">
+        <!-- Skip link -->
+        <a href="#main" class="skip">Hoppa till huvudinnehållet.</a>
+
         <!-- Icon for page -->
         <a href="#">
           <svg
@@ -22,7 +25,7 @@
             viewBox="0 0 214 210"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g fill="none" stroke="" stroke-width="12">
+            <g fill="none" stroke-width="12">
               <path
                 d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"
               />
@@ -35,7 +38,7 @@
         </a>
         <!-- Text to the right of icon -->
         <nav>
-          <!-- Could be made into a hambuger menu if i have the time -->
+          <!-- Could be made into a hamburger menu if i have the time -->
           <ul>
             <li role="list"><a href="#">Hem</a></li>
             <li role="list"><a href="#">Historik</a></li>
@@ -46,6 +49,7 @@
 
         <div class="hamburger">
           <svg
+            aria-label="meny för sido-navigering"
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-menu"
             width="36"
@@ -66,7 +70,7 @@
       </div>
     </header>
 
-    <main class="flow content-grid">
+    <main id="main" class="flow content-grid">
       <article class="banner-header">
         <h1>Våra uppskattade växter</h1>
         <p class="max-inline">
@@ -76,12 +80,36 @@
         </p>
 
         <section class="grid-container border-shadow image-gallery">
-          <img class="a" src="https://picsum.photos/350?random=1" alt="" />
-          <img class="b" src="https://picsum.photos/350?random=2" alt="" />
-          <img class="c" src="https://picsum.photos/350?random=3" alt="" />
-          <img class="d" src="https://picsum.photos/350?random=4" alt="" />
-          <img class="e" src="https://picsum.photos/350?random=5" alt="" />
-          <img class="f" src="https://picsum.photos/350?random=6" alt="" />
+          <img
+            class="a"
+            src="https://picsum.photos/650?random=1"
+            alt="Slumpmässig bild i ett galleri"
+          />
+          <img
+            class="b"
+            src="https://picsum.photos/450?random=2"
+            alt="Slumpmässig bild i ett galleri"
+          />
+          <img
+            class="c"
+            src="https://picsum.photos/450?random=3"
+            alt="Slumpmässig bild i ett galleri"
+          />
+          <img
+            class="d"
+            src="https://picsum.photos/450?random=4"
+            alt="Slumpmässig bild i ett galleri"
+          />
+          <img
+            class="e"
+            src="https://picsum.photos/450?random=5"
+            alt="Slumpmässig bild i ett galleri"
+          />
+          <img
+            class="f"
+            src="https://picsum.photos/450?random=6"
+            alt="Slumpmässig bild i ett galleri"
+          />
         </section>
       </article>
 
@@ -97,9 +125,8 @@
           </div>
         </div>
         <!-- svg file thats styled inside a section with a background color and radius -->
-        <section class="green-bg">
+        <section aria-hidden="true" class="green-bg">
           <svg
-            aria-hidden="true"
             width="100"
             height="100"
             viewBox="0 0 199 196"
@@ -188,7 +215,10 @@
         <!-- Card 1 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=1" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=1"
+            alt="Vacker bild på en gurka"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex gap-tiny">
             <a href="#" class="flower border-r"> Blommor </a>
@@ -210,7 +240,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/54"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -218,7 +248,7 @@
               <a href="#">Coolio</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-04-01</time>
+                <time>2024-04-01</time>
               </div>
             </section>
           </section>
@@ -227,7 +257,10 @@
         <!-- Card 2 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=2" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=2"
+            alt="En underbart röd tomat hängande i en stjälk"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex gap-tiny">
             <a href="#" class="flower border-r"> Solälskande </a>
@@ -248,7 +281,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/57"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -256,7 +289,7 @@
               <a href="#"> Anna Odlare </a>
               <!-- Div to linebreak -->
               <div>
-                <time class=""> 2024-12-05 </time>
+                <time> 2024-12-05 </time>
               </div>
             </section>
           </section>
@@ -265,7 +298,10 @@
         <!-- Card 3 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=3" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=3"
+            alt="En vacker, lättskött pelargon"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex wrap gap-tiny">
             <a href="#" class="decorative border-r">Dekorativ</a>
@@ -287,7 +323,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/62"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -295,7 +331,7 @@
               <a href="#">Blomsterkalle</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-03</time>
+                <time>2024-12-03</time>
               </div>
             </section>
           </section>
@@ -304,7 +340,10 @@
         <!-- Card 4 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=4" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=4"
+            alt="En kruka med en fyllig basilika"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex gap-tiny">
             <a href="#" class="decorative border-r">Dekorativ</a>
@@ -325,7 +364,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/67"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -333,7 +372,7 @@
               <a href="#">Krydd-Malin</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-07</time>
+                <time>2024-12-07</time>
               </div>
             </section>
           </section>
@@ -342,7 +381,10 @@
         <!-- Card 5 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=5" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=5"
+            alt="Ett stort salladshuvud på en tallrik"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex wrap gap-tiny">
             <a href="#" class="fast border-r">Snabbväxande</a>
@@ -363,7 +405,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/73"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -371,7 +413,7 @@
               <a href="#">Grönis</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-06</time>
+                <time>2024-12-06</time>
               </div>
             </section>
           </section>
@@ -380,7 +422,10 @@
         <!-- Card 6 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=6" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=6"
+            alt="Ormbunkar i en skog"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex wrap gap-tiny">
             <a href="#" class="decorative border-r">Luftfuktande</a>
@@ -401,7 +446,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/75"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -409,7 +454,7 @@
               <a href="#">Naturvännen</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-08</time>
+                <time>2024-12-08</time>
               </div>
             </section>
           </section>
@@ -418,7 +463,10 @@
         <!-- Card 7 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=1" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=1"
+            alt="Vacker bild på en gurka"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex gap-tiny">
             <a href="#" class="flower border-r"> Blommor </a>
@@ -440,7 +488,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/54"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -448,7 +496,7 @@
               <a href="#">Coolio</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-04-01</time>
+                <time>2024-04-01</time>
               </div>
             </section>
           </section>
@@ -457,7 +505,10 @@
         <!-- Card 8 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=2" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=2"
+            alt="En underbart röd tomat hängande i en stjälk"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex gap-tiny">
             <a href="#" class="flower border-r"> Solälskande </a>
@@ -478,7 +529,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/57"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -486,7 +537,7 @@
               <a href="#"> Anna Odlare </a>
               <!-- Div to linebreak -->
               <div>
-                <time class=""> 2024-12-05 </time>
+                <time> 2024-12-05 </time>
               </div>
             </section>
           </section>
@@ -495,7 +546,10 @@
         <!-- Card 9 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=3" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=3"
+            alt="En vacker, lättskött pelargon"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex wrap gap-tiny">
             <a href="#" class="decorative border-r">Dekorativ</a>
@@ -517,7 +571,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/62"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -525,7 +579,7 @@
               <a href="#">Blomsterkalle</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-03</time>
+                <time>2024-12-03</time>
               </div>
             </section>
           </section>
@@ -534,7 +588,10 @@
         <!-- Card 10 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=4" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=4"
+            alt="En kruka med en fyllig basilika"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex gap-tiny">
             <a href="#" class="decorative border-r">Dekorativ</a>
@@ -555,7 +612,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/67"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -563,7 +620,7 @@
               <a href="#">Krydd-Malin</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-07</time>
+                <time>2024-12-07</time>
               </div>
             </section>
           </section>
@@ -572,7 +629,10 @@
         <!-- Card 11 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=5" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=5"
+            alt="Ett stort salladshuvud på en tallrik"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex wrap gap-tiny">
             <a href="#" class="fast border-r">Snabbväxande</a>
@@ -593,7 +653,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/73"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -601,7 +661,7 @@
               <a href="#">Grönis</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-06</time>
+                <time>2024-12-06</time>
               </div>
             </section>
           </section>
@@ -610,7 +670,10 @@
         <!-- Card 12 -->
         <article class="card border-shadow">
           <!-- Image at the top of the card -->
-          <img src="https://picsum.photos/300/300?random=6" alt="" />
+          <img
+            src="https://picsum.photos/300/300?random=6"
+            alt="Ormbunkar i en skog"
+          />
           <!-- Colored tags -->
           <section class="topic-tags flex wrap gap-tiny">
             <a href="#" class="decorative border-r">Luftfuktande</a>
@@ -631,7 +694,7 @@
           <section class="flex gap-1">
             <img
               class="author-image"
-              src="https://i.pravatar.cc/"
+              src="https://i.pravatar.cc/75"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
@@ -639,7 +702,7 @@
               <a href="#">Naturvännen</a>
               <!-- Div to linebreak -->
               <div>
-                <time class="">2024-12-08</time>
+                <time>2024-12-08</time>
               </div>
             </section>
           </section>
@@ -649,9 +712,8 @@
       <!-- Second banner -->
       <section class="light-bg banners fullwidth margin-block">
         <!-- svg file thats styled inside a section with a background color and radius -->
-        <section class="green-bg">
+        <section aria-hidden="true" class="green-bg">
           <svg
-            aria-hidden="true"
             width="100"
             height="100"
             viewBox="0 0 199 196"
@@ -776,6 +838,15 @@
             </ul>
           </nav>
         </div>
+        <!-- Hidden button that the screenreader picks up, allows user to go back to start of the page -->
+        <button
+          class="visually-hidden"
+          onclick="topFunction()"
+          id="topBtn"
+          title="Tillbaka till toppen av sidan"
+        >
+          Start
+        </button>
       </footer>
     </main>
   </body>
