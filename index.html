@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bilder på Blommor." />
+    <meta name="description" content="Hitta våra uppskattade växter och ta en del av naturen." />
 
     <link rel="stylesheet" href="style.css" />
     <title>Planthood</title>
@@ -11,7 +11,8 @@
   <body>
     <header class="content-grid fullwidth">
       <div class="nav-flex">
-        <a class="" href="#">
+        <!-- Icon for page -->
+        <a href="#">
           <svg
             width="40"
             height="50"
@@ -27,19 +28,19 @@
               />
             </g>
           </svg>
-          <!-- Icon for page -->
           <p>Planned <span class="block line-height">Planthood</span></p>
         </a>
         <!-- Text to the right of icon -->
         <nav>
           <!-- Could be made into a hambuger menu if i have the time -->
           <ul>
-            <li class="" role="list"><a href="#">Hem</a></li>
-            <li class="" role="list"><a href="#">Historik</a></li>
-            <li class="" role="list"><a href="#">Tips</a></li>
-            <li class="" role="list"><a href="#">Kontakt</a></li>
+            <li role="list"><a href="#">Hem</a></li>
+            <li role="list"><a href="#">Historik</a></li>
+            <li role="list"><a href="#">Tips</a></li>
+            <li role="list"><a href="#">Kontakt</a></li>
           </ul>
         </nav>
+
         <div class="hamburger">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +183,7 @@
 
       <section class="cards">
         <!-- Card 1 -->
-        <div class="card border-shadow">
+        <article class="card border-shadow">
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=1" alt="" />
           <!-- Colored tags -->
@@ -218,10 +219,10 @@
               </div>
             </section>
           </section>
-        </div>
+        </article>
 
         <!-- Card 2 -->
-        <div class="card border-shadow">
+        <article class="card border-shadow">
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=2" alt="" />
           <!-- Colored tags -->
@@ -256,10 +257,10 @@
               </div>
             </section>
           </section>
-        </div>
+        </article>
 
         <!-- Card 3 -->
-        <div class="card border-shadow">
+        <article class="card border-shadow">
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=3" alt="" />
           <!-- Colored tags -->
@@ -295,10 +296,10 @@
               </div>
             </section>
           </section>
-        </div>
+        </article>
 
         <!-- Card 4 -->
-        <div class="card border-shadow">
+        <article class="card border-shadow">
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=4" alt="" />
           <!-- Colored tags -->
@@ -333,10 +334,10 @@
               </div>
             </section>
           </section>
-        </div>
+        </article>
 
         <!-- Card 5 -->
-        <div class="card border-shadow">
+        <article class="card border-shadow">
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=5" alt="" />
           <!-- Colored tags -->
@@ -371,10 +372,10 @@
               </div>
             </section>
           </section>
-        </div>
+        </article>
 
         <!-- Card 6 -->
-        <div class="card border-shadow">
+        <article class="card border-shadow">
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=6" alt="" />
           <!-- Colored tags -->
@@ -409,11 +410,12 @@
               </div>
             </section>
           </section>
-        </div>
+        </article>
       </section>
-
+      
       <!-- Second banner -->
-      <section class="light-bg banners fullwidth">
+      <section class="light-bg banners fullwidth margin-block">
+        <!-- svg file thats styled inside a section with a background color and radius -->
         <section class="green-bg">
           <svg
             aria-hidden="true"
@@ -497,6 +499,7 @@
             />
           </svg>
         </section>
+
         <section>
           <h2>Våra tidigare odlingar</h2>
           <p class="max-inline-50ch">
@@ -505,11 +508,11 @@
             delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
             nam quaerat doloribus?
           </p>
+
           <div class="flex button-banner-pos">
             <button>Planterade plantor</button>
           </div>
         </section>
-        <!-- svg file for image, have the image be in a empty div thats styled with a background color and radius -->
       </section>
 
       <footer class="fullwidth">

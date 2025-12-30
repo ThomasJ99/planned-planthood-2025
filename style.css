@@ -405,6 +405,11 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .gap-3 {
   gap: var(--flow-space-lg);
 }
+
+.margin-block {
+  margin-block: var(--flow-space-lg) var(--flow-space);
+}
+
 /*** Block Elements ***/
 
 /* I only use one header so i decided to style the entire element */
@@ -549,14 +554,18 @@ together with the rest of the media items */
   padding: var(--flow-space-lg);
 }
 
-/* Styling för banners that are not the first one */
+/* Styling for banners that are not the header banner */
 .banners {
   display: flex;
+  /* Wraps the elements and puts the svg at the top */
   flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
   gap: var(--flow-space-lg);
   padding-block: var(--flow-space);
+
+  /* Space above and below the banner, used margin here since I used padding for the inner part */
+  /* margin-block: var(--flow-space-lg) var(--flow-space); */
 
   h2 {
     max-inline-size: 20ch;
@@ -567,11 +576,9 @@ together with the rest of the media items */
     padding-bottom: var(--spacing-base);
   }
 
-  /* Space above and below the banner, used margin here since I used padding for the inner part */
-  margin-block: var(--flow-space-lg) var(--flow-space);
-
   /* Poor mans solution to finding the correct asset to wrap */
   &:nth-child(5) {
+    /* Wraps the svg on the second banner to be at the top */
     flex-wrap: wrap;
     /* background-color: #0071ff;
     border: 19px solid gold; */
@@ -636,14 +643,14 @@ together with the rest of the media items */
     /* Makes it so that the author card is always at the same height */
     min-height: 15ch;
   }
-}
 
-/* Styling for the author profile picture */
-.author-image {
-  height: 50px;
-  width: 50px;
-  border-radius: var(--flow-space-lg);
-  border: 2px solid var(--clr-neutral-900);
+  /* Styling for the author profile picture */
+  .author-image {
+    height: 50px;
+    width: 50px;
+    border-radius: var(--flow-space-lg);
+    border: 2px solid var(--clr-neutral-900);
+  }
 }
 
 footer {
