@@ -215,6 +215,7 @@ input {
   }
 }
 
+/* Used this once, could probably have utilized these two more to reduce the amount of repetition in my code */
 .flow > * + * {
   margin-block-start: var(--flow-space);
 }
@@ -277,6 +278,10 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   display: block;
 }
 
+.line-height-sm {
+  line-height: 0.5;
+}
+
 .line-height {
   line-height: 1;
 }
@@ -285,6 +290,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   box-shadow: var(--border-shadow);
 }
 
+/* Only using bold right now, might be able to implement a few more */
 .fw-regular {
   font-weight: var(--fw-400);
 }
@@ -296,6 +302,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .fw-semi-bold {
   font-weight: var(--fw-600);
 }
+
 .fw-bold {
   font-weight: var(--fw-700);
 }
@@ -416,7 +423,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 /* I only use one header so i decided to style the entire element */
 header {
-  /* color: var(--clr-accent); */
+  /* Basic styling to apply to everything in the header */
   font-weight: var(--fw-600);
   background-color: var(--clr-accent-light-1);
   text-transform: uppercase;
@@ -426,13 +433,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Pushes the nav slighty towards the middle, making the elements not touch the edge */
     margin-inline: var(--spacing-base);
 
     a {
       display: flex;
+      /* Adds space between logo and name */
       gap: var(--spacing-base);
       font-size: var(--fs-400);
       align-items: center;
+      /* Removes hover decoration on logo name */
       text-decoration: none;
     }
 
@@ -442,14 +452,10 @@ header {
     }
 
     ul {
-      /* gap: var(--flow-space); */
-      /* gap: var(--spacing-base); */
-
       display: flex;
 
       a {
         /* Padding adds space for the background color on hover */
-        /* padding: var(--spacing-base); */
         padding: var(--spacing-base) var(--flow-space);
         transition: 0.2s;
         font-weight: var(--fw-600);
@@ -468,15 +474,16 @@ header {
   /* Flex element for the structure and access to gap */
   display: flex;
   flex-direction: column;
+  /* Centers content */
   align-items: center;
   text-align: center;
-  gap: var(--flow-space);
 
+  gap: var(--flow-space);
   /* Adds space above and below banner header  */
   padding-block: var(--flow-space-lg) var(--flow-space);
 }
 
-/* Grid areas setup */
+/* Grid areas setup, would love to know if there is a way to write this more efficiently */
 .a {
   grid-area: a;
 }
@@ -523,9 +530,9 @@ header {
   }
 }
 
-/* Green background for the banners with svg's in them */
-/* Can use flex row reverse later to invert the layout instead of moving it around in the HTML */
-.green-bg {
+/* Green background for the banners with svg's in them, this could be nested in banners if I have time */
+.green-bg-svg {
+  /* Adds a background color, makes it round and adds padding to make the circle bigger */
   background-color: var(--clr-accent);
   border-radius: 15rem;
   padding: var(--flow-space-lg);
@@ -568,6 +575,7 @@ header {
   /* Inline block so it takes up enough space height wise while also containing its inline, depends on its children */
   display: inline-block;
   border: 1px solid black;
+  /* Rounds the border enough to match the button */
   border-radius: 2rem;
 }
 
@@ -576,14 +584,17 @@ header {
   justify-content: flex-end;
 }
 
-/* Might make this a utility instead since its only 1 line at the moment */
+/* The colorful tags inside the cards */
 .topic-tags {
-  font-weight: var(--fw-bold);
-  padding-top: var(--flow-space);
-  min-height: 5rem;
   align-items: flex-start;
+  font-weight: var(--fw-bold);
+  /* Pushes the tags down a bit from the image */
+  padding-top: var(--flow-space);
+  /* Ensures the cards dont get bigger with more tags */
+  min-height: 5rem;
 
   a {
+    /* Basic text styling inside the tags */
     text-transform: uppercase;
     color: var(--clr-accent-light-1);
     font-size: var(--fs-100);
@@ -596,14 +607,14 @@ header {
   display: grid;
   /* Creates columns that are at least 30ch wide and at max 1fr */
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  /* Separates the cards */
   gap: var(--spacing-base);
 }
 
 .card {
-  /* Might be able to make some backgrounds utilities */
-  background-color: var(--clr-accent-light-1);
   /* Adds space around the inside of the card, I chose to include the head image because I prefer how it looks */
   padding: var(--spacing-base);
+
   /* Places the author section at the bottom */
   margin-top: auto;
 
@@ -618,13 +629,12 @@ header {
   }
 
   p {
-    /* margin-bottom: var(--spacing-base); */
     /* Makes it so that the author card is always at the same height */
     min-height: 16ch;
   }
 
-  /* Styling for the author profile picture, could use a advanced selector here */
-  .author-image {
+  /* Styling for the author profile picture */
+  section img {
     height: 50px;
     width: 50px;
     border-radius: var(--flow-space-lg);
@@ -633,6 +643,7 @@ header {
 
   /* Selects sections with a section in them, had to write it like this to use align items on the first section */
   section {
+    /* Aligns author name and time to be on the same height as author image */
     align-items: center;
     section {
       line-height: 1;
@@ -649,21 +660,25 @@ footer {
   color: var(--clr-accent-light-1);
   padding-block: var(--flow-space);
 
+  /* Class to utilize flex */
   .footer {
     display: flex;
-    flex-wrap: wrap;
+    /* Separates om oss block and nav */
     justify-content: space-between;
+    /* More space towards the edge of the screen */
     margin-inline: var(--spacing-base);
 
+    /* Adds space above and below p */
     p {
       padding-block: var(--spacing-base);
     }
 
+    /* Gets the parents color */
     a {
       color: inherit;
-      padding-bottom: var(--spacing-base);
     }
 
+    /* Adds space between nav elements */
     li {
       padding-top: var(--spacing-base);
     }
@@ -671,10 +686,12 @@ footer {
 }
 
 .hamburger {
+  /* Hidden at start */
   display: none;
-  padding: 0.5rem;
-  transition: 0.2s;
   cursor: pointer;
+  transition: 0.2s;
+  /* Padding for bigger hover effect, tried with a calc */
+  padding: calc(var(--spacing-base) / 2);
 
   &:hover {
     background-color: var(--clr-accent);
@@ -698,6 +715,14 @@ footer {
 
 /* Hides and adjusts "items" for phone */
 @media (width <= 768px) {
+  .grid-container {
+    /* New layout for phone on image gallery */
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
+
   /* Hides both nav's */
   nav {
     display: none;
@@ -708,24 +733,25 @@ footer {
     display: block;
   }
 
-  /* Makes the 2 banners wrap at 768 px */
+  /* Makes the 2 banners wrap at 768px */
   .banners {
-    padding-inline: 10rem;
+    /* Increases size of element to allow it to wrap at 768px */
+    padding-inline: 4rem;
     /* Condenses content for mobile */
     gap: var(--spacing-base);
+
+    /* Flips the second banner */
+    /* flex-direction: column-reverse; */
+
+    /* Removes the above padding to allow the object to not get squished when screen size gets small */
+    @media (width <= 600px) {
+      padding-inline: 0;
+    }
   }
 
   /* Centers button on second banner */
   .button-banner-pos {
     justify-content: center;
-  }
-
-  .grid-container {
-    /* New layout for phone on image gallery */
-    grid-template-areas:
-      "a b"
-      "c d"
-      "e f";
   }
 
   /* Removes a bit of spacing below tags */
