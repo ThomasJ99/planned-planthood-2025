@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hitta våra uppskattade växter och ta en del av naturen." />
+    <meta
+      name="description"
+      content="Hitta våra uppskattade växter och ta en del av naturen."
+    />
 
     <link rel="stylesheet" href="style.css" />
     <title>Planthood</title>
@@ -82,18 +85,18 @@
         </section>
       </article>
 
+      <!-- First banner -->
       <section class="light-bg banners fullwidth">
         <div>
-          <h2>
-            Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
-          </h2>
+          <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+
           <div class="button-container">
             <label for="user-email"></label>
             <input id="user-email" placeholder="namn@domän.se" type="email" />
             <button>Skicka</button>
           </div>
         </div>
-        <!-- svg file for image, have the image be in a empty div thats styled with a background color and radius -->
+        <!-- svg file thats styled inside a section with a background color and radius -->
         <section class="green-bg">
           <svg
             aria-hidden="true"
@@ -180,7 +183,7 @@
       </section>
 
       <h2 class="align-text">Alla våra växter</h2>
-
+      <!-- Parent of all cards -->
       <section class="cards">
         <!-- Card 1 -->
         <article class="card border-shadow">
@@ -411,8 +414,238 @@
             </section>
           </section>
         </article>
+
+        <!-- Card 7 -->
+        <article class="card border-shadow">
+          <!-- Image at the top of the card -->
+          <img src="https://picsum.photos/300/300?random=1" alt="" />
+          <!-- Colored tags -->
+          <section class="topic-tags flex gap-tiny">
+            <a href="#" class="flower border-r"> Blommor </a>
+            <a href="#" class="edible border-r">Ätbart</a>
+            <a href="#" class="greenery border-r"> Grönska </a>
+          </section>
+
+          <!-- Descriptive part of the card -->
+          <section>
+            <h3>Gurka</h3>
+            <p>
+              Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
+              bara man är noga med vattning, omplantering, duschning och
+              gödsling.
+            </p>
+          </section>
+
+          <!-- author containing a profile picture, name and date of the card -->
+          <section class="flex gap-1">
+            <img
+              class="author-image"
+              src="https://i.pravatar.cc/"
+              alt="Profilbild av kortets författare"
+            />
+            <!-- Group the elements together for the flex element -->
+            <section>
+              <a href="#">Coolio</a>
+              <!-- Div to linebreak -->
+              <div>
+                <time class="">2024-04-01</time>
+              </div>
+            </section>
+          </section>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="card border-shadow">
+          <!-- Image at the top of the card -->
+          <img src="https://picsum.photos/300/300?random=2" alt="" />
+          <!-- Colored tags -->
+          <section class="topic-tags flex gap-tiny">
+            <a href="#" class="flower border-r"> Solälskande </a>
+            <a href="#" class="easy border-r">Lättodlat</a>
+            <a href="#" class="edible border-r"> Ätbart </a>
+          </section>
+
+          <!-- Descriptive part of the card -->
+          <section>
+            <h3>Tomat</h3>
+            <p>
+              En perfekt grönsak att odla på balkongen eller i trädgården. Ger
+              riklig skörd under sommaren.
+            </p>
+          </section>
+
+          <!-- Author containing a profile picture, name and date of the card -->
+          <section class="flex gap-1">
+            <img
+              class="author-image"
+              src="https://i.pravatar.cc/"
+              alt="Profilbild av kortets författare"
+            />
+            <!-- Group the elements together for the flex element -->
+            <section>
+              <a href="#"> Anna Odlare </a>
+              <!-- Div to linebreak -->
+              <div>
+                <time class=""> 2024-12-05 </time>
+              </div>
+            </section>
+          </section>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="card border-shadow">
+          <!-- Image at the top of the card -->
+          <img src="https://picsum.photos/300/300?random=3" alt="" />
+          <!-- Colored tags -->
+          <section class="topic-tags flex wrap gap-tiny">
+            <a href="#" class="decorative border-r">Dekorativ</a>
+            <a href="#" class="colorful border-r">Färgstark</a>
+            <a href="#" class="robust border-r">Tålig</a>
+            <a href="#" class="flower border-r">Blommor</a>
+          </section>
+
+          <!-- Descriptive part of the card -->
+          <section>
+            <h3>Pelargon</h3>
+            <p>
+              En vacker och lättskött blomma som trivs både inne och ute under
+              sommaren.
+            </p>
+          </section>
+
+          <!-- author containing a profile picture, name and date of the card -->
+          <section class="flex gap-1">
+            <img
+              class="author-image"
+              src="https://i.pravatar.cc/"
+              alt="Profilbild av kortets författare"
+            />
+            <!-- Group the elements together for the flex element -->
+            <section>
+              <a href="#">Blomsterkalle</a>
+              <!-- Div to linebreak -->
+              <div>
+                <time class="">2024-12-03</time>
+              </div>
+            </section>
+          </section>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="card border-shadow">
+          <!-- Image at the top of the card -->
+          <img src="https://picsum.photos/300/300?random=4" alt="" />
+          <!-- Colored tags -->
+          <section class="topic-tags flex gap-tiny">
+            <a href="#" class="decorative border-r">Dekorativ</a>
+            <a href="#" class="colorful border-r">Färgstark</a>
+            <a href="#" class="robust border-r"> Tålig </a>
+          </section>
+
+          <!-- Descriptive part of the card -->
+          <section>
+            <h3>Basilika</h3>
+            <p>
+              En fantastisk krydda för pastarätter och sallader. Trivs bäst i
+              ett soligt fönster.
+            </p>
+          </section>
+
+          <!-- author containing a profile picture, name and date of the card -->
+          <section class="flex gap-1">
+            <img
+              class="author-image"
+              src="https://i.pravatar.cc/"
+              alt="Profilbild av kortets författare"
+            />
+            <!-- Group the elements together for the flex element -->
+            <section>
+              <a href="#">Krydd-Malin</a>
+              <!-- Div to linebreak -->
+              <div>
+                <time class="">2024-12-07</time>
+              </div>
+            </section>
+          </section>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="card border-shadow">
+          <!-- Image at the top of the card -->
+          <img src="https://picsum.photos/300/300?random=5" alt="" />
+          <!-- Colored tags -->
+          <section class="topic-tags flex wrap gap-tiny">
+            <a href="#" class="fast border-r">Snabbväxande</a>
+            <a href="#" class="edible border-r">Ätbart</a>
+            <a href="#" class="greenery border-r">Grönska</a>
+          </section>
+
+          <!-- Descriptive part of the card -->
+          <section>
+            <h3>Sallad</h3>
+            <p>
+              Sallad är en av de enklaste grönsakerna att odla och ger snabba
+              resultat för färska måltider.
+            </p>
+          </section>
+
+          <!-- author containing a profile picture, name and date of the card -->
+          <section class="flex gap-1">
+            <img
+              class="author-image"
+              src="https://i.pravatar.cc/"
+              alt="Profilbild av kortets författare"
+            />
+            <!-- Group the elements together for the flex element -->
+            <section>
+              <a href="#">Grönis</a>
+              <!-- Div to linebreak -->
+              <div>
+                <time class="">2024-12-06</time>
+              </div>
+            </section>
+          </section>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="card border-shadow">
+          <!-- Image at the top of the card -->
+          <img src="https://picsum.photos/300/300?random=6" alt="" />
+          <!-- Colored tags -->
+          <section class="topic-tags flex wrap gap-tiny">
+            <a href="#" class="decorative border-r">Luftfuktande</a>
+            <a href="#" class="easy border-r">Grönska</a>
+            <a href="#" class="edible border-r">Dekorativ</a>
+          </section>
+
+          <!-- Descriptive part of the card -->
+          <section>
+            <h3>Ormbunke</h3>
+            <p>
+              En klassisk växt som passar perfekt i badrummet eller på skuggiga
+              platser.
+            </p>
+          </section>
+
+          <!-- author containing a profile picture, name and date of the card -->
+          <section class="flex gap-1">
+            <img
+              class="author-image"
+              src="https://i.pravatar.cc/"
+              alt="Profilbild av kortets författare"
+            />
+            <!-- Group the elements together for the flex element -->
+            <section>
+              <a href="#">Naturvännen</a>
+              <!-- Div to linebreak -->
+              <div>
+                <time class="">2024-12-08</time>
+              </div>
+            </section>
+          </section>
+        </article>
       </section>
-      
+
       <!-- Second banner -->
       <section class="light-bg banners fullwidth margin-block">
         <!-- svg file thats styled inside a section with a background color and radius -->
@@ -516,7 +749,8 @@
       </section>
 
       <footer class="fullwidth">
-        <div class="flexy">
+        <!-- Similar to the header, I put flex elements below main parent since its a grid -->
+        <div class="footer">
           <section>
             <h2>Om oss</h2>
             <p class="max-inline-60">
@@ -528,7 +762,7 @@
             <address class="fw-bold">
               <a href="#">Telefon: 020-1234567</a>
               <!-- Linebreak -->
-              <div>
+              <div class="margin-top-base">
                 <a href="#">E-post: info@plannedplant.com</a>
               </div>
             </address>
