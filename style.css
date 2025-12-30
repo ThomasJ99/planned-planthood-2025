@@ -208,7 +208,7 @@ input {
   padding-inline: 2rem;
   color: var(--font-base);
 
-  /* Need to figure out how to remove the textbox that appears */
+  /* Removes border that appears when highlighted */
   &:focus {
     border: none;
     outline: none;
@@ -285,8 +285,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   box-shadow: var(--border-shadow);
 }
 
-/* Need to set these fw up correctly */
-
 .fw-regular {
   font-weight: var(--fw-400);
 }
@@ -358,15 +356,11 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   border-radius: var(--spacing-base);
 }
 
-.max-inline {
-  max-inline-size: 70ch;
-}
-
-.max-inline-20ch {
+.max-inline-20 {
   max-inline-size: 20ch;
 }
 
-.max-inline-50ch {
+.max-inline-45 {
   max-inline-size: 45ch;
 }
 
@@ -374,12 +368,12 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   max-inline-size: 60ch;
 }
 
-.align-text {
-  text-align: center;
+.max-inline-70 {
+  max-inline-size: 70ch;
 }
 
-.align-items {
-  align-items: center;
+.align-text {
+  text-align: center;
 }
 
 .flex {
@@ -637,12 +631,15 @@ header {
     border: 2px solid var(--clr-neutral-900);
   }
 
-  /* Selects sections with a section in them */
-  section section {
-    line-height: 1;
+  /* Selects sections with a section in them, had to write it like this to use align items on the first section */
+  section {
+    align-items: center;
+    section {
+      line-height: 1;
 
-    time {
-      font-size: var(--fs-200);
+      time {
+        font-size: var(--fs-200);
+      }
     }
   }
 }

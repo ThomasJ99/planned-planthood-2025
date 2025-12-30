@@ -18,7 +18,7 @@
         <a href="#main" class="skip">Hoppa till huvudinnehållet.</a>
 
         <!-- Icon for page -->
-        <a href="#">
+        <a href="#" aria-label="Planthood - Startsida">
           <svg
             width="40"
             height="50"
@@ -73,43 +73,23 @@
     <main id="main" class="flow content-grid">
       <article class="banner-header">
         <h1>Våra uppskattade växter</h1>
-        <p class="max-inline">
+        <p class="max-inline-70">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
           ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore
           autem! Expedita illo deleniti maiores harum consequatur debitis hic.
         </p>
 
-        <section class="grid-container border-shadow image-gallery">
-          <img
-            class="a"
-            src="https://picsum.photos/650?random=1"
-            alt="Slumpmässig bild i ett galleri"
-          />
-          <img
-            class="b"
-            src="https://picsum.photos/450?random=2"
-            alt="Slumpmässig bild i ett galleri"
-          />
-          <img
-            class="c"
-            src="https://picsum.photos/450?random=3"
-            alt="Slumpmässig bild i ett galleri"
-          />
-          <img
-            class="d"
-            src="https://picsum.photos/450?random=4"
-            alt="Slumpmässig bild i ett galleri"
-          />
-          <img
-            class="e"
-            src="https://picsum.photos/450?random=5"
-            alt="Slumpmässig bild i ett galleri"
-          />
-          <img
-            class="f"
-            src="https://picsum.photos/450?random=6"
-            alt="Slumpmässig bild i ett galleri"
-          />
+        <section
+          class="grid-container border-shadow image-gallery"
+          aria-label="Bildgalleri med växter"
+        >
+          <!-- Chose not to have any alt text for generated images because they serve little purpose and only annoy the reader if there's a lot -->
+          <img class="a" src="https://picsum.photos/650?random=1" alt="" />
+          <img class="b" src="https://picsum.photos/450?random=2" alt="" />
+          <img class="c" src="https://picsum.photos/450?random=3" alt="" />
+          <img class="d" src="https://picsum.photos/450?random=4" alt="" />
+          <img class="e" src="https://picsum.photos/450?random=5" alt="" />
+          <img class="f" src="https://picsum.photos/450?random=6" alt="" />
         </section>
       </article>
 
@@ -119,9 +99,15 @@
           <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
 
           <div class="button-container">
-            <label for="user-email"></label>
-            <input id="user-email" placeholder="namn@domän.se" type="email" />
-            <button>Skicka</button>
+            <input
+              aria-label="email-fält"
+              placeholder="namn@domän.se"
+              type="email"
+              required
+            />
+            <button type="submit" aria-label="Skicka e-postadress">
+              Skicka
+            </button>
           </div>
         </div>
         <!-- svg file thats styled inside a section with a background color and radius -->
@@ -213,14 +199,11 @@
       <!-- Parent of all cards -->
       <section class="cards">
         <!-- Card 1 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="gurka-titel">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=1"
-            alt="Vacker bild på en gurka"
-          />
+          <img src="https://picsum.photos/300/300?random=1" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex gap-tiny">
+          <section class="topic-tags flex gap-tiny" aria-label="Kategorier">
             <a href="#" class="flower border-r"> Blommor </a>
             <a href="#" class="edible border-r">Ätbart</a>
             <a href="#" class="greenery border-r"> Grönska </a>
@@ -228,7 +211,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Gurka</h3>
+            <h3 id="gurka-titel">Gurka</h3>
             <p>
               Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
               bara man är noga med vattning, omplantering, duschning och
@@ -245,24 +228,21 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Coolio</a>
+              <a href="#" aria-label="Länk till författaren">Coolio</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-04-01</time>
+                <time datetime="2024-04-01">2024-04-01</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 2 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="tomat-titel">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=2"
-            alt="En underbart röd tomat hängande i en stjälk"
-          />
+          <img src="https://picsum.photos/300/300?random=2" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex gap-tiny">
+          <section class="topic-tags flex gap-tiny" aria-label="Kategorier">
             <a href="#" class="flower border-r"> Solälskande </a>
             <a href="#" class="easy border-r">Lättodlat</a>
             <a href="#" class="edible border-r"> Ätbart </a>
@@ -270,7 +250,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Tomat</h3>
+            <h3 id="tomat-titel">Tomat</h3>
             <p>
               En perfekt grönsak att odla på balkongen eller i trädgården. Ger
               riklig skörd under sommaren.
@@ -286,24 +266,24 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#"> Anna Odlare </a>
+              <a href="#" aria-label="Länk till författaren"> Anna Odlare </a>
               <!-- Div to linebreak -->
               <div>
-                <time> 2024-12-05 </time>
+                <time datetime="2024-12-05">2024-12-05</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 3 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="pelargon-titel">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=3"
-            alt="En vacker, lättskött pelargon"
-          />
+          <img src="https://picsum.photos/300/300?random=3" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex wrap gap-tiny">
+          <section
+            class="topic-tags flex wrap gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="decorative border-r">Dekorativ</a>
             <a href="#" class="colorful border-r">Färgstark</a>
             <a href="#" class="robust border-r">Tålig</a>
@@ -312,7 +292,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Pelargon</h3>
+            <h3 id="pelargon-titel">Pelargon</h3>
             <p>
               En vacker och lättskött blomma som trivs både inne och ute under
               sommaren.
@@ -328,24 +308,21 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Blomsterkalle</a>
+              <a href="#" aria-label="Länk till författaren">Blomsterkalle</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-03</time>
+                <time datetime="2024-12-03">2024-12-03</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 4 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="basilika-titel">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=4"
-            alt="En kruka med en fyllig basilika"
-          />
+          <img src="https://picsum.photos/300/300?random=4" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex gap-tiny">
+          <section class="topic-tags flex gap-tiny" aria-label="Kategorier">
             <a href="#" class="decorative border-r">Dekorativ</a>
             <a href="#" class="colorful border-r">Färgstark</a>
             <a href="#" class="robust border-r"> Tålig </a>
@@ -353,7 +330,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Basilika</h3>
+            <h3 id="basilika-titel">Basilika</h3>
             <p>
               En fantastisk krydda för pastarätter och sallader. Trivs bäst i
               ett soligt fönster.
@@ -369,24 +346,24 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Krydd-Malin</a>
+              <a href="#" aria-label="Länk till författaren">Krydd-Malin</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-07</time>
+                <time datetime="2024-12-07">2024-12-07</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 5 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="sallad-titel">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=5"
-            alt="Ett stort salladshuvud på en tallrik"
-          />
+          <img src="https://picsum.photos/300/300?random=5" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex wrap gap-tiny">
+          <section
+            class="topic-tags flex wrap gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="fast border-r">Snabbväxande</a>
             <a href="#" class="edible border-r">Ätbart</a>
             <a href="#" class="greenery border-r">Grönska</a>
@@ -394,7 +371,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Sallad</h3>
+            <h3 id="sallad-titel">Sallad</h3>
             <p>
               Sallad är en av de enklaste grönsakerna att odla och ger snabba
               resultat för färska måltider.
@@ -410,24 +387,24 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Grönis</a>
+              <a href="#" aria-label="Länk till författaren">Grönis</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-06</time>
+                <time datetime="2024-12-06">2024-12-06</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 6 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="ormbunke-titel">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=6"
-            alt="Ormbunkar i en skog"
-          />
+          <img src="https://picsum.photos/300/300?random=6" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex wrap gap-tiny">
+          <section
+            class="topic-tags flex wrap gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="decorative border-r">Luftfuktande</a>
             <a href="#" class="easy border-r">Grönska</a>
             <a href="#" class="edible border-r">Dekorativ</a>
@@ -435,7 +412,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Ormbunke</h3>
+            <h3 id="ormbunke-titel">Ormbunke</h3>
             <p>
               En klassisk växt som passar perfekt i badrummet eller på skuggiga
               platser.
@@ -451,24 +428,21 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Naturvännen</a>
+              <a href="#" aria-label="Länk till författaren">Naturvännen</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-08</time>
+                <time datetime="2024-12-08">2024-12-08</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 7 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="gurka-title">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=1"
-            alt="Vacker bild på en gurka"
-          />
+          <img src="https://picsum.photos/300/300?random=1" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex gap-tiny">
+          <section class="topic-tags flex gap-tiny" aria-label="Kategorier">
             <a href="#" class="flower border-r"> Blommor </a>
             <a href="#" class="edible border-r">Ätbart</a>
             <a href="#" class="greenery border-r"> Grönska </a>
@@ -476,7 +450,8 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Gurka</h3>
+            <!-- Different name since ID's have to be unique -->
+            <h3 id="gurka-title">Gurka</h3>
             <p>
               Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
               bara man är noga med vattning, omplantering, duschning och
@@ -493,24 +468,21 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Coolio</a>
+              <a href="#" aria-label="Länk till författaren">Coolio</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-04-01</time>
+                <time datetime="2024-04-01">2024-04-01</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 8 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="tomat-title">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=2"
-            alt="En underbart röd tomat hängande i en stjälk"
-          />
+          <img src="https://picsum.photos/300/300?random=2" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex gap-tiny">
+          <section class="topic-tags flex gap-tiny" aria-label="Kategorier">
             <a href="#" class="flower border-r"> Solälskande </a>
             <a href="#" class="easy border-r">Lättodlat</a>
             <a href="#" class="edible border-r"> Ätbart </a>
@@ -518,7 +490,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Tomat</h3>
+            <h3 id="tomat-title">Tomat</h3>
             <p>
               En perfekt grönsak att odla på balkongen eller i trädgården. Ger
               riklig skörd under sommaren.
@@ -534,24 +506,24 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#"> Anna Odlare </a>
+              <a href="#" aria-label="Länk till författaren"> Anna Odlare </a>
               <!-- Div to linebreak -->
               <div>
-                <time> 2024-12-05 </time>
+                <time datetime="2024-12-05">2024-12-05</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 9 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="pelargon-title">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=3"
-            alt="En vacker, lättskött pelargon"
-          />
+          <img src="https://picsum.photos/300/300?random=3" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex wrap gap-tiny">
+          <section
+            class="topic-tags flex wrap gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="decorative border-r">Dekorativ</a>
             <a href="#" class="colorful border-r">Färgstark</a>
             <a href="#" class="robust border-r">Tålig</a>
@@ -560,7 +532,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Pelargon</h3>
+            <h3 id="pelargon-title">Pelargon</h3>
             <p>
               En vacker och lättskött blomma som trivs både inne och ute under
               sommaren.
@@ -576,24 +548,21 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Blomsterkalle</a>
+              <a href="#" aria-label="Länk till författaren">Blomsterkalle</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-03</time>
+                <time datetime="2024-12-08">2024-12-08</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 10 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="basilika-title">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=4"
-            alt="En kruka med en fyllig basilika"
-          />
+          <img src="https://picsum.photos/300/300?random=4" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex gap-tiny">
+          <section class="topic-tags flex gap-tiny" aria-label="Kategorier">
             <a href="#" class="decorative border-r">Dekorativ</a>
             <a href="#" class="colorful border-r">Färgstark</a>
             <a href="#" class="robust border-r"> Tålig </a>
@@ -601,7 +570,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Basilika</h3>
+            <h3 id="basilika-title">Basilika</h3>
             <p>
               En fantastisk krydda för pastarätter och sallader. Trivs bäst i
               ett soligt fönster.
@@ -617,24 +586,24 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Krydd-Malin</a>
+              <a href="#" aria-label="Länk till författaren">Krydd-Malin</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-07</time>
+                <time datetime="2024-12-08">2024-12-08</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 11 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="sallad-title">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=5"
-            alt="Ett stort salladshuvud på en tallrik"
-          />
+          <img src="https://picsum.photos/300/300?random=5" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex wrap gap-tiny">
+          <section
+            class="topic-tags flex wrap gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="fast border-r">Snabbväxande</a>
             <a href="#" class="edible border-r">Ätbart</a>
             <a href="#" class="greenery border-r">Grönska</a>
@@ -642,7 +611,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Sallad</h3>
+            <h3 id="sallad-title">Sallad</h3>
             <p>
               Sallad är en av de enklaste grönsakerna att odla och ger snabba
               resultat för färska måltider.
@@ -658,24 +627,24 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Grönis</a>
+              <a href="#" aria-label="Länk till författaren">Grönis</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-06</time>
+                <time datetime="2024-12-08">2024-12-08</time>
               </div>
             </section>
           </section>
         </article>
 
         <!-- Card 12 -->
-        <article class="card border-shadow">
+        <article class="card border-shadow" aria-labelledby="ormbunke-title">
           <!-- Image at the top of the card -->
-          <img
-            src="https://picsum.photos/300/300?random=6"
-            alt="Ormbunkar i en skog"
-          />
+          <img src="https://picsum.photos/300/300?random=6" alt=""/>
           <!-- Colored tags -->
-          <section class="topic-tags flex wrap gap-tiny">
+          <section
+            class="topic-tags flex wrap gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="decorative border-r">Luftfuktande</a>
             <a href="#" class="easy border-r">Grönska</a>
             <a href="#" class="edible border-r">Dekorativ</a>
@@ -683,7 +652,7 @@
 
           <!-- Descriptive part of the card -->
           <section>
-            <h3>Ormbunke</h3>
+            <h3 id="ormbunke-title">Ormbunke</h3>
             <p>
               En klassisk växt som passar perfekt i badrummet eller på skuggiga
               platser.
@@ -699,10 +668,10 @@
             />
             <!-- Group the elements together for the flex element -->
             <section>
-              <a href="#">Naturvännen</a>
+              <a href="#" aria-label="Länk till författaren">Naturvännen</a>
               <!-- Div to linebreak -->
               <div>
-                <time>2024-12-08</time>
+                <time datetime="2024-12-08">2024-12-08</time>
               </div>
             </section>
           </section>
@@ -797,7 +766,7 @@
 
         <section>
           <h2>Våra tidigare odlingar</h2>
-          <p class="max-inline-50ch">
+          <p class="max-inline-45">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto
             delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
@@ -805,7 +774,7 @@
           </p>
 
           <div class="flex button-banner-pos">
-            <button>Planterade plantor</button>
+            <button aria-label="Visa plantor">Planterade plantor</button>
           </div>
         </section>
       </section>
@@ -821,6 +790,7 @@
               Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione
               earum. Iure, eius molestias?
             </p>
+
             <address class="fw-bold">
               <a href="#">Telefon: 020-1234567</a>
               <!-- Linebreak -->
@@ -829,6 +799,7 @@
               </div>
             </address>
           </section>
+
           <nav>
             <ul>
               <li role="list"><a href="#">Hem</a></li>
@@ -838,15 +809,6 @@
             </ul>
           </nav>
         </div>
-        <!-- Hidden button that the screenreader picks up, allows user to go back to start of the page -->
-        <button
-          class="visually-hidden"
-          onclick="topFunction()"
-          id="topBtn"
-          title="Tillbaka till toppen av sidan"
-        >
-          Start
-        </button>
       </footer>
     </main>
   </body>
