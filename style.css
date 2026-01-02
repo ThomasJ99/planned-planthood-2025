@@ -183,12 +183,13 @@ body {
 
 /* Styling for buttons */
 button {
-  border-radius: 2rem;
-  padding: 0.35rem 1.25rem;
-  margin: 2px;
   background-color: var(--clr-accent);
   border: 2px solid var(--clr-accent);
+  border-radius: 2rem;
+  margin: 2px;
+  padding: 0.35rem 1.25rem;
 
+  transition: 0.2s;
   cursor: pointer;
 
   &:hover {
@@ -203,10 +204,10 @@ button {
 
 /* Styling for input fields */
 input {
+  color: inherit;
   background: none;
   border: none;
-  padding-inline: 2rem;
-  color: var(--font-base);
+  padding-inline: var(--flow-space);
 
   /* Removes border that appears when highlighted */
   &:focus {
@@ -278,10 +279,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   display: block;
 }
 
-.line-height-sm {
-  line-height: 0.5;
-}
-
 .line-height {
   line-height: 1;
 }
@@ -290,7 +287,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   box-shadow: var(--border-shadow);
 }
 
-/* Only using bold right now, might be able to implement a few more */
+/* Only using semi/bold right now, might be able to implement a few more */
 .fw-regular {
   font-weight: var(--fw-400);
 }
@@ -424,7 +421,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 /* I only use one header so i decided to style the entire element */
 header {
   /* Basic styling to apply to everything in the header */
-  font-weight: var(--fw-600);
   background-color: var(--clr-accent-light-1);
   text-transform: uppercase;
 
@@ -438,12 +434,11 @@ header {
 
     a {
       display: flex;
-      /* Adds space between logo and name */
-      gap: var(--spacing-base);
-      font-size: var(--fs-400);
       align-items: center;
       /* Removes hover decoration on logo name */
       text-decoration: none;
+      /* Adds space between logo and name */
+      gap: var(--spacing-base);
     }
 
     /* Color for the svg logo */
@@ -458,7 +453,6 @@ header {
         /* Padding adds space for the background color on hover */
         padding: var(--spacing-base) var(--flow-space);
         transition: 0.2s;
-        font-weight: var(--fw-600);
 
         &:hover {
           background-color: var(--clr-accent);
@@ -574,7 +568,7 @@ header {
 .button-container {
   /* Inline block so it takes up enough space height wise while also containing its inline, depends on its children */
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid var(--clr-primary-dark);
   /* Rounds the border enough to match the button */
   border-radius: 2rem;
 }
@@ -586,7 +580,6 @@ header {
 
 /* The colorful tags inside the cards */
 .topic-tags {
-  align-items: flex-start;
   font-weight: var(--fw-bold);
   /* Pushes the tags down a bit from the image */
   padding-top: var(--flow-space);
@@ -638,7 +631,7 @@ header {
     height: 50px;
     width: 50px;
     border-radius: var(--flow-space-lg);
-    border: 2px solid var(--clr-neutral-900);
+    border: 2px solid var(--clr-primary-dark);
   }
 
   /* Selects sections with a section in them, had to write it like this to use align items on the first section */
@@ -736,7 +729,7 @@ footer {
   /* Makes the 2 banners wrap at 768px */
   .banners {
     /* Increases size of element to allow it to wrap at 768px */
-    padding-inline: 4rem;
+    padding-inline: var(--flow-space-lg);
     /* Condenses content for mobile */
     gap: var(--spacing-base);
 
