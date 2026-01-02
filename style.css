@@ -163,6 +163,7 @@ h3 {
   font-weight: var(--fw-semi-bold);
 }
 
+/* Color and decoration */
 a {
   text-decoration: none;
   color: var(--clr-accent);
@@ -185,28 +186,35 @@ body {
 button {
   background-color: var(--clr-accent);
   border: 2px solid var(--clr-accent);
-  border-radius: 2rem;
+  border-radius: calc(var(--spacing-base) * 2);
+  /* Adds a slight gap between button and border */
   margin: 2px;
+  /* Broadens and thickens the button slightly */
   padding: 0.35rem 1.25rem;
 
   transition: 0.2s;
   cursor: pointer;
 
+  /* Inverts colors */
   &:hover {
     color: var(--clr-accent);
-    background-color: var(--clr-accent-light-1);
+    background-color: var(--clr-primary-light-1);
   }
 
+  /* Mild touch to make it visible that the button is pressed down */
   &:active {
-    background-color: var(--clr-primary-light-1);
+    background-color: var(--clr-accent-light-1);
   }
 }
 
 /* Styling for input fields */
 input {
   color: inherit;
+  /* Removes the boarders and background color */
   background: none;
   border: none;
+
+  /* Bit bigger button to fit a email address in */
   padding-inline: var(--flow-space);
 
   /* Removes border that appears when highlighted */
@@ -309,7 +317,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .light-bg {
-  background-color: var(--clr-accent-light-1);
+  background-color: var(--clr-primary-light-1);
 }
 
 .flower {
@@ -324,10 +332,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   background-color: var(--clr-green);
 }
 
-.sunloving {
-  background-color: var(--clr-sunloving);
-}
-
 .robust {
   background-color: var(--clr-robust);
 }
@@ -340,16 +344,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   background-color: var(--clr-decorative);
 }
 
-.air {
-  background-color: var(--clr-air);
-}
-
 .easy {
   background-color: var(--clr-easy);
-}
-
-.fragrant {
-  background-color: var(--clr-fragrant);
 }
 
 .fast {
@@ -372,10 +368,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   max-inline-size: 60ch;
 }
 
-.max-inline-70 {
-  max-inline-size: 70ch;
-}
-
 .align-text {
   text-align: center;
 }
@@ -388,8 +380,16 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   align-items: start;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .wrap {
@@ -404,15 +404,15 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   gap: 0.25rem;
 }
 
-.gap-1 {
+.gap {
   gap: var(--spacing-base);
 }
 
-.gap-2 {
+.gap-flow {
   gap: var(--flow-space);
 }
 
-.gap-3 {
+.gap-flow-lg {
   gap: var(--flow-space-lg);
 }
 
@@ -424,29 +424,32 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   margin-block: var(--flow-space-lg) var(--flow-space);
 }
 
+.padding-block {
+  padding-block: var(--flow-space-lg) var(--flow-space);
+}
+
+.padding-space {
+  padding: var(--spacing-base);
+}
+
+.padding-space-bot {
+  padding-bottom: var(--spacing-base);
+}
+
 /*** Block Elements ***/
 
 /* I only use one header so i decided to style the entire element */
 header {
-  /* Basic styling to apply to everything in the header */
-  background-color: var(--clr-accent-light-1);
-  text-transform: uppercase;
-
   /* With content grid I had to seperate the flex element to be outside the grid element by putting it on a div right below that encapsulates every other element */
   .nav-flex {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     /* Pushes the nav slighty towards the middle, making the elements not touch the edge */
     margin-inline: var(--spacing-base);
 
     a {
       display: flex;
-      align-items: center;
       /* Removes hover decoration on logo name */
       text-decoration: none;
-      /* Adds space between logo and name */
-      gap: var(--spacing-base);
     }
 
     /* Color for the svg logo */
@@ -455,8 +458,6 @@ header {
     }
 
     ul {
-      display: flex;
-
       a {
         /* Padding adds space for the background color on hover */
         padding: var(--spacing-base) var(--flow-space);
@@ -464,25 +465,32 @@ header {
 
         &:hover {
           background-color: var(--clr-accent);
-          color: var(--clr-accent-light-1);
+          color: var(--clr-primary-light-1);
         }
       }
     }
   }
 }
 
-/* Site banner with text, also contains the image grid */
-.banner-header {
-  /* Flex element for the structure and access to gap */
-  display: flex;
-  flex-direction: column;
-  /* Centers content */
-  align-items: center;
-  text-align: center;
+/* Styling for hamburger menu, could be nested in header if I have time */
+.hamburger {
+  /* Hidden at start */
+  display: none;
 
-  gap: var(--flow-space);
-  /* Adds space above and below banner header  */
-  padding-block: var(--flow-space-lg) var(--flow-space);
+  cursor: pointer;
+  transition: 0.2s;
+
+  /* Padding for bigger hover effect, tried with a calc */
+  padding: calc(var(--spacing-base) / 2);
+
+  &:hover {
+    background-color: var(--clr-accent);
+
+    /* Allows me to style the svg in while hovering the div */
+    svg {
+      stroke: var(--clr-primary-light-1);
+    }
+  }
 }
 
 /* Grid areas setup, would love to know if there is a way to write this more efficiently */
@@ -520,7 +528,6 @@ header {
     "a a e e f f";
 
   /* Background for the image grid container */
-  background-color: var(--clr-accent-light-1);
   padding: var(--spacing-base);
 
   img {
@@ -533,42 +540,28 @@ header {
 }
 
 /* Green background for the banners with svg's in them, this could be nested in banners if I have time */
-.green-bg-svg {
-  /* Adds a background color, makes it round and adds padding to make the circle bigger */
-  background-color: var(--clr-accent);
-  border-radius: 15rem;
-  padding: var(--flow-space-lg);
-}
 
 /* Styling for banners that are not the header banner */
 .banners {
-  display: flex;
-  /* Centers banner content*/
-  align-items: center;
+  /* Centering */
   justify-content: center;
   /* Wraps the elements and puts the svg at the top on first banner */
   flex-wrap: wrap-reverse;
 
-  /* Space between svg and opposite text */
-  gap: var(--flow-space-lg);
   /* Adds some more space to the banners height */
   padding-block: var(--flow-space);
-
-  h2 {
-    max-inline-size: 20ch;
-    /* Adds some space between h2, p and button */
-    padding-bottom: var(--spacing-base);
-  }
-
-  p {
-    /* Adds space between p and button on banner 2 */
-    padding-bottom: var(--spacing-base);
-  }
 
   /* Poor mans solution to finding the correct asset to wrap */
   &:nth-child(5) {
     /* Wraps the svg on the second banner to be at the top */
     flex-wrap: wrap;
+  }
+
+  /* Green background for the banners with svg's in them, could be made classless if I have time */
+  .green-bg-svg {
+    background-color: var(--clr-accent);
+    border-radius: 15rem;
+    padding: var(--flow-space-lg);
   }
 }
 
@@ -578,7 +571,7 @@ header {
   display: inline-block;
   border: 1px solid var(--clr-primary-dark);
   /* Rounds the border enough to match the button */
-  border-radius: 2rem;
+  border-radius: calc(var(--spacing-base) * 2);
 }
 
 /* Puts the button at the correct spot, is later centered in a media querie */
@@ -588,7 +581,6 @@ header {
 
 /* The colorful tags inside the cards */
 .topic-tags {
-  font-weight: var(--fw-bold);
   /* Pushes the tags down a bit from the image */
   padding-top: var(--spacing-base);
   /* Ensures the cards dont get bigger with more tags */
@@ -596,8 +588,7 @@ header {
 
   a {
     /* Basic text styling inside the tags */
-    text-transform: uppercase;
-    color: var(--clr-accent-light-1);
+    color: var(--clr-primary-light-1);
     font-size: var(--fs-100);
     /* Padding on the tags to make the area less cramped */
     padding: 4px 8px;
@@ -608,25 +599,25 @@ header {
   display: grid;
   /* Creates columns that are at least 30ch wide and at max 1fr */
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-  /* Separates the cards */
-  gap: var(--spacing-base);
 }
 
 .card {
-  /* Adds space around the inside of the card, I chose to include the head image because I prefer how it looks */
-  padding: var(--spacing-base);
-
   /* Places the author section at the bottom */
   margin-top: auto;
+  display: grid;
 
   /* Makes the top image of the card always take up the card width */
-  > img {
+  > img,
+  svg {
     width: 100%;
+    /* Added these to make the watermark be on the same layer */
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
   }
 
   h3 {
     /* Adds spacing above and below h3 */
-    margin-block: var(--spacing-base);
+    padding-block: var(--spacing-base);
   }
 
   p {
@@ -648,14 +639,21 @@ header {
   }
 }
 
+/* Basic styling for watermark */
+.watermark {
+  align-self: center;
+  height: calc(var(--flow-space) * 3);
+  width: calc(var(--flow-space) * 3);
+  opacity: 0.4;
+}
+
 footer {
   background-color: var(--clr-accent);
-  color: var(--clr-accent-light-1);
+  color: var(--clr-primary-light-1);
   padding-block: var(--flow-space);
 
   /* Class to utilize flex */
   .footer {
-    display: flex;
     /* Separates om oss block and nav */
     justify-content: space-between;
     /* More space towards the edge of the screen */
@@ -674,24 +672,6 @@ footer {
     /* Adds space between nav elements */
     li {
       padding-top: var(--spacing-base);
-    }
-  }
-}
-
-.hamburger {
-  /* Hidden at start */
-  display: none;
-  cursor: pointer;
-  transition: 0.2s;
-  /* Padding for bigger hover effect, tried with a calc */
-  padding: calc(var(--spacing-base) / 2);
-
-  &:hover {
-    background-color: var(--clr-accent);
-
-    /* Allows me to style the svg in while hovering the div */
-    svg {
-      stroke: var(--clr-accent-light-1);
     }
   }
 }
@@ -729,12 +709,9 @@ footer {
   /* Makes the 2 banners wrap at 768px */
   .banners {
     /* Increases size of element to allow it to wrap at 768px */
-    padding-inline: var(--flow-space-lg);
+    padding-inline: calc(var(--flow-space-lg) + var(--spacing-base));
     /* Condenses content for mobile */
     gap: var(--spacing-base);
-
-    /* Flips the second banner */
-    /* flex-direction: column-reverse; */
 
     /* Removes the above padding to allow the object to not get squished when screen size gets small */
     @media (width <= 600px) {
@@ -758,14 +735,8 @@ footer {
   }
 
   .card {
-    h3 {
-      /* Adds spacing above and below h3 */
-      margin-block: var(--spacing-base);
-    }
-
     p {
       /* Author card is slightly higher up, making the cards a bit more condensed for mobile */
-      margin-bottom: 0;
       min-height: 10ch;
     }
 
@@ -791,6 +762,7 @@ footer {
   }
 }
 
+/* Global Accessibility */
 .skip {
   /*Skip link*/
   position: absolute;

@@ -7,18 +7,19 @@
       name="description"
       content="Hitta våra uppskattade växter och ta en del av naturen."
     />
-
+    <!-- Added favicon to try and also to make the tab stand out -->
+    <link rel="icon" type="svg" href="assets/images/logo.svg" />
     <link rel="stylesheet" href="style.css" />
     <title>Planthood</title>
   </head>
   <body>
-    <header class="content-grid fullwidth fw-semi-bold">
-      <div class="nav-flex">
+    <header class="content-grid fullwidth light-bg fw-semi-bold uppercase">
+      <div class="nav-flex flex">
         <!-- Skip link -->
         <a href="#main" class="skip">Hoppa till huvudinnehållet.</a>
 
         <!-- Icon for page -->
-        <a href="#" aria-label="Planthood - Startsida">
+        <a class="align-items gap flex" href="#" aria-label="Planthood - Startsida">
           <svg
             width="40"
             height="50"
@@ -37,9 +38,9 @@
           <p class="line-height">Planned<span class="block">Planthood</span></p>
         </a>
         <!-- Text to the right of icon -->
-        <nav>
+        <nav aria-label="Sidnavigation">
           <!-- Could be made into a hamburger menu if i have the time -->
-          <ul role="list">
+          <ul class="flex" role="list">
             <li><a href="#">Hem</a></li>
             <li><a href="#">Historik</a></li>
             <li><a href="#">Tips</a></li>
@@ -71,32 +72,36 @@
     </header>
 
     <main id="main" class="flow content-grid">
-      <article class="banner-header">
+      <article
+        class="gap-flow padding-block flex flex-column align-items align-text"
+      >
         <h1>Våra uppskattade växter</h1>
-        <p class="max-inline-70">
+        <p class="max-inline-60">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
           ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore
           autem! Expedita illo deleniti maiores harum consequatur debitis hic.
         </p>
 
-        <section
-          class="grid-container border-shadow image-gallery"
+        <figure
+          class="grid-container border-shadow image-gallery light-bg"
           aria-label="Galleri som innehåller olika bilder av våra växter"
         >
-          <!-- Chose not to have any alt text for generated images because they serve little purpose and only annoy the reader if there's a lot -->
+          <!-- Chose not to have any alt text for generated images because they serve little purpose and only annoy the reader if there's a lot, aka decorative -->
           <img class="a" src="https://picsum.photos/650?random=1" alt="" />
           <img class="b" src="https://picsum.photos/450?random=2" alt="" />
           <img class="c" src="https://picsum.photos/450?random=3" alt="" />
           <img class="d" src="https://picsum.photos/450?random=4" alt="" />
           <img class="e" src="https://picsum.photos/450?random=5" alt="" />
           <img class="f" src="https://picsum.photos/450?random=6" alt="" />
-        </section>
+        </figure>
       </article>
 
       <!-- First banner -->
-      <section class="light-bg banners fullwidth">
-        <div>
-          <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+      <article class="light-bg banners fullwidth gap-flow-lg flex align-items">
+        <section aria-label="Nyhetsbrev">
+          <h2 class="max-inline-20 padding-space-bot">
+            Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
+          </h2>
 
           <div class="button-container">
             <input
@@ -109,7 +114,7 @@
               Skicka
             </button>
           </div>
-        </div>
+        </section>
         <!-- svg file thats styled inside a section with a background color and radius -->
         <section aria-hidden="true" class="green-bg-svg">
           <svg
@@ -193,20 +198,53 @@
             />
           </svg>
         </section>
-      </section>
+      </article>
 
       <h2 class="align-text">Alla våra växter</h2>
       <!-- Parent of all cards -->
-      <section class="cards">
+      <section class="cards gap">
         <!-- Card 1 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="gurka-titel"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=1" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
-          <section class="topic-tags align-items-start flex gap-tiny" aria-label="Kategorier">
+          <section
+            class="topic-tags fw-bold uppercase align-items-start flex gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="flower border-r"> Blommor </a>
             <a href="#" class="edible border-r">Ätbart</a>
             <a href="#" class="greenery border-r"> Grönska </a>
@@ -223,14 +261,14 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/54"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Coolio</a>
+              <a href="#" aria-label="Länk till författaren Coolio">Coolio</a>
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-04-01">2024-04-01</time>
@@ -241,13 +279,46 @@
 
         <!-- Card 2 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="tomat-titel"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=2" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
-          <section class="topic-tags align-items-start flex gap-tiny" aria-label="Kategorier">
+          <section
+            class="topic-tags fw-bold uppercase align-items-start flex gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="flower border-r"> Solälskande </a>
             <a href="#" class="easy border-r">Lättodlat</a>
             <a href="#" class="edible border-r"> Ätbart </a>
@@ -263,14 +334,16 @@
           </section>
 
           <!-- Author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/57"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren"> Anna Odlare </a>
+              <a href="#" aria-label="Länk till författaren Anna Odlare">
+                Anna Odlare
+              </a>
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-05">2024-12-05</time>
@@ -281,14 +354,44 @@
 
         <!-- Card 3 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="pelargon-titel"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=3" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
           <section
-            class="topic-tags align-items-start flex wrap gap-tiny"
+            class="topic-tags fw-bold uppercase align-items-start flex wrap gap-tiny"
             aria-label="Kategorier"
           >
             <a href="#" class="decorative border-r">Dekorativ</a>
@@ -307,14 +410,16 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/62"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Blomsterkalle</a>
+              <a href="#" aria-label="Länk till författaren Blomsterkalle"
+                >Blomsterkalle</a
+              >
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-03">2024-12-03</time>
@@ -325,13 +430,46 @@
 
         <!-- Card 4 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="basilika-titel"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=4" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
-          <section class="topic-tags align-items-start flex gap-tiny" aria-label="Kategorier">
+          <section
+            class="topic-tags fw-bold uppercase align-items-start flex gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="decorative border-r">Dekorativ</a>
             <a href="#" class="colorful border-r">Färgstark</a>
             <a href="#" class="robust border-r"> Tålig </a>
@@ -347,14 +485,16 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/67"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Krydd-Malin</a>
+              <a href="#" aria-label="Länk till författaren Krydd-Malin"
+                >Krydd-Malin</a
+              >
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-07">2024-12-07</time>
@@ -365,14 +505,44 @@
 
         <!-- Card 5 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="sallad-titel"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=5" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
           <section
-            class="topic-tags align-items-start flex wrap gap-tiny"
+            class="topic-tags fw-bold uppercase align-items-start flex wrap gap-tiny"
             aria-label="Kategorier"
           >
             <a href="#" class="fast border-r">Snabbväxande</a>
@@ -390,14 +560,14 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/73"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Grönis</a>
+              <a href="#" aria-label="Länk till författaren Grönis">Grönis</a>
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-06">2024-12-06</time>
@@ -408,14 +578,44 @@
 
         <!-- Card 6 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="ormbunke-titel"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=6" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
           <section
-            class="topic-tags align-items-start flex wrap gap-tiny"
+            class="topic-tags fw-bold uppercase align-items-start flex wrap gap-tiny"
             aria-label="Kategorier"
           >
             <a href="#" class="decorative border-r">Luftfuktande</a>
@@ -433,14 +633,16 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/75"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Naturvännen</a>
+              <a href="#" aria-label="Länk till författaren Naturvännen"
+                >Naturvännen</a
+              >
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-08">2024-12-08</time>
@@ -451,13 +653,46 @@
 
         <!-- Card 7 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="gurka-title"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=1" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
-          <section class="topic-tags align-items-start flex gap-tiny" aria-label="Kategorier">
+          <section
+            class="topic-tags fw-bold uppercase align-items-start flex gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="flower border-r"> Blommor </a>
             <a href="#" class="edible border-r">Ätbart</a>
             <a href="#" class="greenery border-r"> Grönska </a>
@@ -475,14 +710,14 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/54"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Coolio</a>
+              <a href="#" aria-label="Länk till författaren Coolio">Coolio</a>
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-04-01">2024-04-01</time>
@@ -493,13 +728,46 @@
 
         <!-- Card 8 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="tomat-title"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=2" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
-          <section class="topic-tags align-items-start flex gap-tiny" aria-label="Kategorier">
+          <section
+            class="topic-tags fw-bold uppercase align-items-start flex gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="flower border-r"> Solälskande </a>
             <a href="#" class="easy border-r">Lättodlat</a>
             <a href="#" class="edible border-r"> Ätbart </a>
@@ -515,14 +783,16 @@
           </section>
 
           <!-- Author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/57"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren"> Anna Odlare </a>
+              <a href="#" aria-label="Länk till författaren Anna Odlare">
+                Anna Odlare
+              </a>
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-05">2024-12-05</time>
@@ -533,14 +803,44 @@
 
         <!-- Card 9 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="pelargon-title"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=3" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
           <section
-            class="topic-tags align-items-start flex wrap gap-tiny"
+            class="topic-tags fw-bold uppercase align-items-start flex wrap gap-tiny"
             aria-label="Kategorier"
           >
             <a href="#" class="decorative border-r">Dekorativ</a>
@@ -559,14 +859,16 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/62"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Blomsterkalle</a>
+              <a href="#" aria-label="Länk till författaren Blomsterkalle"
+                >Blomsterkalle</a
+              >
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-08">2024-12-08</time>
@@ -577,13 +879,46 @@
 
         <!-- Card 10 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="basilika-title"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=4" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
-          <section class="topic-tags align-items-start flex gap-tiny" aria-label="Kategorier">
+          <section
+            class="topic-tags fw-bold uppercase align-items-start flex gap-tiny"
+            aria-label="Kategorier"
+          >
             <a href="#" class="decorative border-r">Dekorativ</a>
             <a href="#" class="colorful border-r">Färgstark</a>
             <a href="#" class="robust border-r"> Tålig </a>
@@ -599,14 +934,16 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/67"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Krydd-Malin</a>
+              <a href="#" aria-label="Länk till författaren Krydd-Malin"
+                >Krydd-Malin</a
+              >
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-08">2024-12-08</time>
@@ -617,14 +954,44 @@
 
         <!-- Card 11 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="sallad-title"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=5" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
           <section
-            class="topic-tags align-items-start flex wrap gap-tiny"
+            class="topic-tags fw-bold uppercase align-items-start flex wrap gap-tiny"
             aria-label="Kategorier"
           >
             <a href="#" class="fast border-r">Snabbväxande</a>
@@ -642,14 +1009,14 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/73"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Grönis</a>
+              <a href="#" aria-label="Länk till författaren Grönis">Grönis</a>
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-08">2024-12-08</time>
@@ -660,14 +1027,44 @@
 
         <!-- Card 12 -->
         <article
-          class="card light-bg border-shadow"
+          class="card light-bg border-shadow padding-space"
           aria-labelledby="ormbunke-title"
         >
           <!-- Image at the top of the card -->
           <img src="https://picsum.photos/300/300?random=6" alt="" />
+          <svg
+            viewBox="0 0 71 93"
+            fill="none"
+            aria-hidden="true"
+            class="watermark"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 39.2725C6.13401 39.2725 3 42.4065 3 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z"
+              fill="white"
+            />
+            <path
+              d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
+              fill="white"
+            />
+            <path
+              d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M67.6763 10.1165H50.0168C42.1562 10.1165 35.7839 16.4888 35.7839 24.3495V24.3495H53.4433C61.3039 24.3495 67.6763 17.9771 67.6763 10.1165V10.1165Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <!-- Colored tags -->
           <section
-            class="topic-tags align-items-start flex wrap gap-tiny"
+            class="topic-tags fw-bold uppercase align-items-start flex wrap gap-tiny"
             aria-label="Kategorier"
           >
             <a href="#" class="decorative border-r">Luftfuktande</a>
@@ -685,14 +1082,16 @@
           </section>
 
           <!-- author containing a profile picture, name and date of the card -->
-          <section class="flex gap-1 align-items">
+          <section class="flex gap align-items">
             <img
               src="https://i.pravatar.cc/75"
               alt="Profilbild av kortets författare"
             />
             <!-- Group the elements together for the flex element -->
             <section class="line-height">
-              <a href="#" aria-label="Länk till författaren">Naturvännen</a>
+              <a href="#" aria-label="Länk till författaren Naturvännen"
+                >Naturvännen</a
+              >
               <!-- Div to linebreak -->
               <div>
                 <time datetime="2024-12-08">2024-12-08</time>
@@ -703,7 +1102,9 @@
       </section>
 
       <!-- Second banner -->
-      <section class="light-bg banners fullwidth margin-block">
+      <section
+        class="light-bg banners fullwidth margin-block gap-flow-lg flex align-items"
+      >
         <!-- svg file thats styled inside a section with a background color and radius -->
         <section aria-hidden="true" class="green-bg-svg">
           <svg
@@ -789,8 +1190,10 @@
         </section>
 
         <section>
-          <h2>Våra tidigare odlingar</h2>
-          <p class="max-inline-45">
+          <h2 class="max-inline-20 padding-space-bot">
+            Våra tidigare odlingar
+          </h2>
+          <p class="max-inline-45 padding-space-bot">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto
             delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
@@ -805,7 +1208,7 @@
 
       <footer class="fullwidth">
         <!-- Similar to the header, I put flex elements below main parent since its a grid -->
-        <div class="footer">
+        <div class="footer flex">
           <section>
             <h2>Om oss</h2>
             <p class="max-inline-60">
@@ -824,7 +1227,7 @@
             </address>
           </section>
 
-          <nav>
+          <nav aria-label="Sidnavigation">
             <ul role="list">
               <li><a href="#">Hem</a></li>
               <li><a href="#">Historik</a></li>
