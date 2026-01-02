@@ -380,6 +380,14 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   text-align: center;
 }
 
+.align-items {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
 .flex {
   display: flex;
 }
@@ -582,9 +590,9 @@ header {
 .topic-tags {
   font-weight: var(--fw-bold);
   /* Pushes the tags down a bit from the image */
-  padding-top: var(--flow-space);
+  padding-top: var(--spacing-base);
   /* Ensures the cards dont get bigger with more tags */
-  min-height: 5rem;
+  min-height: var(--flow-space-lg);
 
   a {
     /* Basic text styling inside the tags */
@@ -634,17 +642,9 @@ header {
     border: 2px solid var(--clr-primary-dark);
   }
 
-  /* Selects sections with a section in them, had to write it like this to use align items on the first section */
-  section {
-    /* Aligns author name and time to be on the same height as author image */
-    align-items: center;
-    section {
-      line-height: 1;
-
-      time {
-        font-size: var(--fs-200);
-      }
-    }
+  /* Makes time text smaller */
+  time {
+    font-size: var(--fs-200);
   }
 }
 
